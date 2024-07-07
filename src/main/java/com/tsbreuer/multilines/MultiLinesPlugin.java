@@ -38,6 +38,7 @@ import net.runelite.api.geometry.Geometry;
 import net.runelite.client.config.ConfigManager;
 import net.runelite.client.plugins.Plugin;
 import net.runelite.client.plugins.PluginDescriptor;
+import net.runelite.client.plugins.grounditems.GroundItemsConfig;
 import net.runelite.client.ui.overlay.OverlayManager;
 import net.runelite.client.callback.ClientThread;
 
@@ -82,6 +83,9 @@ public class MultiLinesPlugin extends Plugin
 	@Inject
 	private ClientThread clientThread;
 
+	@Inject
+	private MultiLinesConfig config;
+
 	@Provides
 	MultiLinesConfig getConfig(ConfigManager configManager)
 	{
@@ -92,6 +96,7 @@ public class MultiLinesPlugin extends Plugin
 	public void startUp()
 	{
 		overlayManager.add(overlay);
+		config.setWarning("Warning, this plugin does not include Wilderness Multi Areas. Please use Wilderness Lines for that.");
 		UpdateMultiLines();
 	}
 
