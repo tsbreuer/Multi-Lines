@@ -40,10 +40,17 @@ public interface MultiLinesConfig extends Config
 			position = 0,
 			section = warning
 	)
-	default String getHighlightItems()
+	default String getWarning()
 	{
 		return "";
 	}
+
+	@ConfigItem(
+			keyName = "UsageWarning",
+			name = "",
+			description = ""
+	)
+	void setWarning(String key);
 
 	@ConfigSection(
 		name = "Multi Lines",
