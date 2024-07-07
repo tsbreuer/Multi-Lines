@@ -3,6 +3,8 @@
     "Areas": [
       {
         "Name": "Weiss",
+        "Enabled": true,
+        "Notes": " - ",
         "Tiles": [
           { "x": 2852, "y": 3922, "width": 40, "height": 25 },
           { "x": 2854, "y": 3947, "width": 40, "height": 1 },
@@ -33,6 +35,8 @@
       },
       {
         "Name": "Troll Stronghold / GWD",
+        "Enabled": true,
+        "Notes": " - ",
         "Tiles": [
           { "x": 2880, "y": 3742, "width": 32, "height": 22 },
           { "x": 2888, "y": 3718, "width": 24, "height": 24 },
@@ -43,6 +47,8 @@
       },
       {
         "Name": "Death Plateau",
+        "Enabled": true,
+        "Notes": " - ",
         "Tiles": [
           { "x": 2848, "y": 3601, "width": 31, "height": 6 },
           { "x": 2872, "y": 3600, "width": 7, "height": 1 },
@@ -52,6 +58,8 @@
       },
       {
         "Name": "Buthorpe / White Wolf Mountain",
+        "Enabled": true,
+        "Notes": " - ",
         "Tiles": [
           { "x": 2880, "y": 3520, "width": 24, "height": 24 },
           { "x": 2816, "y": 3456, "width": 64, "height": 64 }
@@ -60,6 +68,8 @@
       },
       {
         "Name": "Falador chaos altar",
+        "Enabled": true,
+        "Notes": " - ",
         "Tiles": [
           {"x":2928,"y":3512,"width":16,"height":8}
         ]
@@ -67,6 +77,8 @@
       },
       {
         "Name": "Falador",
+        "Enabled": true,
+        "Notes": " - ",
         "Tiles": [
           {"x":2944,"y":3304,"width":64,"height":152},
           {"x":3008,"y":3303,"width":8,"height":25},
@@ -83,6 +95,8 @@
       },
       {
         "Name": "Barbarian village",
+        "Enabled": true,
+        "Notes": " - ",
         "Tiles": [
           {"x": 3072, "y": 3448, "width": 64, "height": 8},
           {"x": 3056, "y": 3392, "width": 80, "height": 48},
@@ -92,6 +106,8 @@
       },
       {
         "Name": "Draynor Jail",
+        "Enabled": true,
+        "Notes": " - ",
         "Tiles": [
           {"x": 3102, "y": 3248, "width": 2, "height": 3},
           {"x": 3104, "y": 3236, "width": 28, "height": 19},
@@ -109,34 +125,255 @@
           {"x": 3117, "y": 3234, "width": 15, "height": 1},
           {"x": 3119, "y": 3233, "width": 9, "height": 1}
         ]
+      },
+      {
+        "Name": "Wizard Tower",
+        "Enabled": true,
+        "Notes": " - ",
+        "Tiles": [
+          {"x": 3094, "y": 3145, "width": 31, "height": 31},
+          {"x": 3103, "y": 3176, "width": 5, "height": 1}
+        ]
+      },
+      {
+        "Name": "Al Kharid",
+        "Enabled": true,
+        "Notes": " - ",
+        "Tiles": [
+          {"x": 3264, "y": 3136, "width": 64, "height": 64}
+        ]
+      },
+      {
+        "Name": "Mort Myre swamp",
+        "Enabled": true,
+        "Notes": " - ",
+        "Tiles": [
+          {"x": 3456, "y": 3328, "width": 64, "height": 64}
+        ]
+      },
+      {
+        "Name": "Burgh de rott",
+        "Enabled": true,
+        "Notes": " - ",
+        "Tiles": [
+          {"x": 3512, "y": 3232, "width": 8, "height": 16}
+        ]
 
       },
       {
-        "Name": "ExampleArea Name (For reference)",
+        "Name": "South from burgh",
+        "Enabled": false,
+        "Notes": "Doesnt seem to be multi on normal worlds, might be on DMM",
         "Tiles": [
-          { "x": 1, "y": 1, "width": 1, "height": 1 }
+          {"x": 3520, "y": 3158, "width": 66, "height": 42},
+          {"x": 3586, "y": 3183, "width": 1, "height": 17}
+        ]
+      },
+      {
+        "Name": "South east of port phasmatys",
+        "Enabled": true,
+        "Notes": " - ",
+        "Tiles": [
+          {"x": 3694, "y": 3433, "width": 15, "height": 20},
+          {"x": 3690, "y": 3433, "width": 4, "height": 20},
+          {"x": 3692, "y": 3453, "width": 17, "height": 1},
+          {"x": 3689, "y": 3450, "width": 1, "height": 3},
+          {"x": 3684, "y": 3440, "width": 6, "height": 10},
+          {"x": 3684, "y": 3439, "width": 6, "height": 1},
+          {"x": 3683, "y": 3440, "width": 1, "height": 7},
+          {"x": 3685, "y": 3433, "width": 5, "height": 6},
+          {"x": 3682, "y": 3444, "width": 1, "height": 3},
+          {"x": 3685, "y": 3450, "width": 4, "height": 1}
+        ]
+      },
+      {
+        "Name": "south west of port phasmatys",
+        "Enabled": true,
+        "Notes": " - ",
+        "Tiles": [
+          {"x": 3589, "y": 3451, "width": 54, "height": 5},
+          {"x": 3590, "y": 3448, "width": 53, "height": 3},
+          {"x": 3592, "y": 3444, "width": 51, "height": 4},
+          {"x": 3594, "y": 3441, "width": 49, "height": 3},
+          {"x": 3596, "y": 3432, "width": 47, "height": 9},
+          {"x": 3604, "y": 3426, "width": 39, "height": 6},
+          {"x": 3621, "y": 3415, "width": 22, "height": 11},
+          {"x": 3608, "y": 3420, "width": 13, "height": 6},
+          {"x": 3643, "y": 3419, "width": 10, "height": 9},
+          {"x": 3643, "y": 3428, "width": 9, "height": 2},
+          {"x": 3643, "y": 3437, "width": 6, "height": 8},
+          {"x": 3643, "y": 3445, "width": 5, "height": 2},
+          {"x": 3643, "y": 3447, "width": 4, "height": 2},
+          {"x": 3643, "y": 3449, "width": 3, "height": 4}
+        ]
+      },
+      {
+        "Name": "Past Bridge south of port phasmatys",
+        "Enabled": true,
+        "Notes": " - ",
+        "Tiles": [
+          {"x": 3589, "y": 3408, "width": 19, "height": 4},
+          {"x": 3584, "y": 3407, "width": 5, "height": 5},
+          {"x": 3584, "y": 3406, "width": 2, "height": 1},
+          {"x": 3597, "y": 3412, "width": 10, "height": 11},
+          {"x": 3586, "y": 3423, "width": 19, "height": 4},
+          {"x": 3586, "y": 3427, "width": 15, "height": 4},
+          {"x": 3584, "y": 3412, "width": 13, "height": 11},
+          {"x": 3608, "y": 3411, "width": 1, "height": 1}
+        ]
+      },
+      {
+        "Name": "Top left of fossil island",
+        "Enabled": true,
+        "Notes": " - ",
+        "Tiles": [
+          {"x": 3653, "y": 3868, "width": 10, "height": 17},
+          {"x": 3663, "y": 3872, "width": 1, "height": 10}
+        ]
+      },
+      {
+        "Name": "Bottom left of fossil island",
+        "Enabled": true,
+        "Notes": " - ",
+        "Tiles": [
+          {"x": 3801, "y": 3751, "width": 2, "height": 11},
+          {"x": 3798, "y": 3748, "width": 3, "height": 11},
+          {"x": 3803, "y": 3752, "width": 23, "height": 10},
+          {"x": 3803, "y": 3762, "width": 23, "height": 1},
+          {"x": 3806, "y": 3763, "width": 20, "height": 1},
+          {"x": 3808, "y": 3764, "width": 18, "height": 1},
+          {"x": 3810, "y": 3765, "width": 16, "height": 1},
+          {"x": 3812, "y": 3766, "width": 12, "height": 1},
+          {"x": 3814, "y": 3767, "width": 6, "height": 1}
+        ]
+      },
+      {
+        "Name": "Top main beach of fossil island",
+        "Enabled": true,
+        "Notes": "Holy fuck jagex what the fuck is this multi zone mapping",
+        "Tiles": [
+          {"x": 3684, "y": 3896, "width": 2, "height": 1},
+          {"x": 3684, "y": 3897, "width": 4, "height": 1},
+          {"x": 3684, "y": 3898, "width": 8, "height": 1},
+          {"x": 3684, "y": 3899, "width": 58, "height": 5},
+          {"x": 3704, "y": 3898, "width": 38, "height": 1},
+          {"x": 3705, "y": 3897, "width": 37, "height": 1},
+          {"x": 3712, "y": 3896, "width": 30, "height": 1},
+          {"x": 3713, "y": 3895, "width": 29, "height": 1},
+          {"x": 3714, "y": 3894, "width": 28, "height": 1},
+          {"x": 3716, "y": 3893, "width": 26, "height": 1},
+          {"x": 3717, "y": 3892, "width": 25, "height": 1},
+          {"x": 3716, "y": 3891, "width": 26, "height": 1},
+          {"x": 3714, "y": 3890, "width": 28, "height": 1},
+          {"x": 3712, "y": 3888, "width": 30, "height": 2},
+          {"x": 3710, "y": 3881, "width": 32, "height": 7},
+          {"x": 3712, "y": 3876, "width": 14, "height": 5},
+          {"x": 3713, "y": 3873, "width": 13, "height": 3},
+          {"x": 3714, "y": 3870, "width": 12, "height": 3},
+          {"x": 3713, "y": 3866, "width": 13, "height": 4},
+          {"x": 3712, "y": 3861, "width": 14, "height": 5},
+          {"x": 3710, "y": 3860, "width": 16, "height": 1},
+          {"x": 3709, "y": 3859, "width": 17, "height": 1},
+          {"x": 3708, "y": 3848, "width": 18, "height": 11},
+          {"x": 3709, "y": 3847, "width": 17, "height": 1},
+          {"x": 3710, "y": 3846, "width": 16, "height": 1},
+          {"x": 3712, "y": 3842, "width": 5, "height": 4},
+          {"x": 3717, "y": 3843, "width": 7, "height": 3},
+          {"x": 3724, "y": 3842, "width": 6, "height": 4},
+          {"x": 3726, "y": 3846, "width": 22, "height": 11},
+          {"x": 3730, "y": 3843, "width": 2, "height": 3},
+          {"x": 3732, "y": 3844, "width": 8, "height": 2},
+          {"x": 3740, "y": 3845, "width": 2, "height": 1},
+          {"x": 3742, "y": 3844, "width": 3, "height": 2},
+          {"x": 3748, "y": 3850, "width": 6, "height": 7},
+          {"x": 3748, "y": 3847, "width": 1, "height": 3},
+          {"x": 3749, "y": 3848, "width": 1, "height": 2},
+          {"x": 3750, "y": 3849, "width": 1, "height": 1},
+          {"x": 3754, "y": 3851, "width": 1, "height": 6},
+          {"x": 3755, "y": 3852, "width": 1, "height": 4}
+        ]
+      },
+      {
+        "Name": "Rellekka",
+        "Enabled": true,
+        "Notes": " - ",
+        "Tiles": [
+          {"x": 2650, "y": 3712, "width": 86, "height": 16},
+          {"x": 2712, "y": 3728, "width": 24, "height": 8},
+          {"x": 2650, "y": 3728, "width": 54, "height": 9}
+        ]
+      },
+      {
+        "Name": "Settlement Ruins Kourend",
+        "Enabled": true,
+        "Notes": "Pending rework to reduce rectangles used",
+        "Tiles": [
+          {"x": 1536, "y": 3875, "width": 35, "height": 33},
+          {"x": 1543, "y": 3874, "width": 26, "height": 1},
+          {"x": 1544, "y": 3873, "width": 25, "height": 1},
+          {"x": 1545, "y": 3872, "width": 23, "height": 1},
+          {"x": 1546, "y": 3871, "width": 21, "height": 1},
+          {"x": 1547, "y": 3870, "width": 19, "height": 1},
+          {"x": 1548, "y": 3869, "width": 17, "height": 1},
+          {"x": 1549, "y": 3868, "width": 15, "height": 1},
+          {"x": 1554, "y": 3867, "width": 10, "height": 1},
+          {"x": 1558, "y": 3866, "width": 6, "height": 1},
+          {"x": 1560, "y": 3865, "width": 3, "height": 1},
+          {"x": 1561, "y": 3864, "width": 1, "height": 1},
+          {"x": 1569, "y": 3874, "width": 1, "height": 1},
+          {"x": 1571, "y": 3875, "width": 1, "height": 6},
+          {"x": 1572, "y": 3876, "width": 1, "height": 4},
+          {"x": 1535, "y": 3888, "width": 1, "height": 2},
+          {"x": 1534, "y": 3890, "width": 2, "height": 8},
+          {"x": 1533, "y": 3896, "width": 1, "height": 2},
+          {"x": 1532, "y": 3898, "width": 4, "height": 10},
+          {"x": 1531, "y": 3902, "width": 1, "height": 2},
+          {"x": 1529, "y": 3903, "width": 2, "height": 1},
+          {"x": 1528, "y": 3904, "width": 4, "height": 4},
+          {"x": 1527, "y": 3905, "width": 1, "height": 1},
+          {"x": 1529, "y": 3908, "width": 6, "height": 1},
+          {"x": 1530, "y": 3909, "width": 4, "height": 1},
+          {"x": 1530, "y": 3910, "width": 4, "height": 1},
+          {"x": 1556, "y": 3908, "width": 2, "height": 1},
+          {"x": 1557, "y": 3909, "width": 1, "height": 1},
+          {"x": 1558, "y": 3908, "width": 13, "height": 3},
+          {"x": 1562, "y": 3911, "width": 2, "height": 1},
+          {"x": 1564, "y": 3911, "width": 7, "height": 2},
+          {"x": 1568, "y": 3913, "width": 18, "height": 1},
+          {"x": 1572, "y": 3914, "width": 12, "height": 1},
+          {"x": 1574, "y": 3915, "width": 1, "height": 1},
+          {"x": 1575, "y": 3915, "width": 7, "height": 2},
+          {"x": 1582, "y": 3915, "width": 1, "height": 1},
+          {"x": 1571, "y": 3884, "width": 1, "height": 1},
+          {"x": 1571, "y": 3885, "width": 2, "height": 3},
+          {"x": 1573, "y": 3886, "width": 1, "height": 2},
+          {"x": 1574, "y": 3887, "width": 18, "height": 1},
+          {"x": 1571, "y": 3888, "width": 21, "height": 25},
+          {"x": 1591, "y": 3913, "width": 1, "height": 1},
+          {"x": 1592, "y": 3889, "width": 1, "height": 1},
+          {"x": 1592, "y": 3890, "width": 2, "height": 2},
+          {"x": 1592, "y": 3892, "width": 3, "height": 3},
+          {"x": 1592, "y": 3895, "width": 4, "height": 1},
+          {"x": 1592, "y": 3896, "width": 5, "height": 1},
+          {"x": 1592, "y": 3897, "width": 6, "height": 2},
+          {"x": 1592, "y": 3899, "width": 7, "height": 1},
+          {"x": 1592, "y": 3900, "width": 8, "height": 2},
+          {"x": 1592, "y": 3902, "width": 2, "height": 12},
+          {"x": 1594, "y": 3911, "width": 1, "height": 2},
+          {"x": 1595, "y": 3911, "width": 1, "height": 1},
+          {"x": 1594, "y": 3902, "width": 3, "height": 9},
+          {"x": 1597, "y": 3909, "width": 1, "height": 1},
+          {"x": 1597, "y": 3908, "width": 2, "height": 1},
+          {"x": 1597, "y": 3902, "width": 3, "height": 6},
+          {"x": 1600, "y": 3902, "width": 1, "height": 5},
+          {"x": 1601, "y": 3904, "width": 1, "height": 3},
+          {"x": 1602, "y": 3906, "width": 1, "height": 1}
         ]
       },
       {
         "Name": "ExampleArea Name (For reference)",
-        "Tiles": [
-          { "x": 1, "y": 1, "width": 1, "height": 1 }
-        ]
-      },
-      {
-        "Name": "ExampleArea Name (For reference)",
-        "Tiles": [
-          { "x": 1, "y": 1, "width": 1, "height": 1 }
-        ]
-      },
-      {
-        "Name": "ExampleArea Name (For reference)",
-        "Tiles": [
-          { "x": 1, "y": 1, "width": 1, "height": 1 }
-        ]
-      },
-      {
-        "Name": "ExampleArea Name (For reference)",
+        "Enabled": true,
+        "Notes": " - ",
         "Tiles": [
           { "x": 1, "y": 1, "width": 1, "height": 1 }
         ]
