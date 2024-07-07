@@ -31,15 +31,18 @@ import java.awt.*;
 @ConfigGroup("Multi-lines")
 public interface MultiLinesConfig extends Config
 {
+	String warning = "Warning, this plugin does not include Wilderness Multi Areas. Please use Wilderness Lines for that.";
+
 	@ConfigItem(
+			keyName = "UsageWarning",
+			name = "Warning",
+			description = "Warning about plugin",
 			position = 0,
-			keyName = "Warning: This plugin does not include wilderness lines",
-			name = "Warning: This plugin does not include wilderness lines",
-			description = "Please use Wilderness Lines for that functionality"
+			section = warning
 	)
-	default boolean onlyShowInWilderness()
+	default String getHighlightItems()
 	{
-		return true;
+		return "";
 	}
 
 	@ConfigSection(
