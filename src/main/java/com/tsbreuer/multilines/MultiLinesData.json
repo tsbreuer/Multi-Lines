@@ -461,7 +461,16 @@
         ]
       },
       {
-        "Name": "ExampleArea Name (For reference)",
+        "Name": "MM2 Area north of gnome stronghold",
+        "Enabled": true,
+        "Notes": " - ",
+        "Tiles": [
+          {"x": 1984, "y": 5568, "width": 46, "height": 59},
+          {"x": 2432, "y": 3520, "width": 46, "height": 59}
+        ]
+      },
+      {
+        "Name": "",
         "Enabled": true,
         "Notes": " - ",
         "Tiles": [
