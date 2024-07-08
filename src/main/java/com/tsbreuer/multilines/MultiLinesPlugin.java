@@ -132,18 +132,20 @@ public class MultiLinesPlugin extends Plugin
 			JsonArray MultiAreas = MultiLines.get("Areas").getAsJsonArray(); // Areas List
 			Multi_MULTI_AREAS = new ArrayList<Rectangle>(); // Clean existing Areas
 			for (JsonElement obj : MultiAreas){ // Map through each area to add tiles
-				JsonArray tiles = obj.getAsJsonObject().get("Tiles").getAsJsonArray();
-				for (JsonElement tile : tiles){ // Loop through each rectangle
-					JsonObject tileObject = tile.getAsJsonObject();
-					// Add each rectangle of tiles
-					Multi_MULTI_AREAS.add(
-							new Rectangle(
-									tileObject.get("x").getAsInt(),
-									tileObject.get("y").getAsInt(),
-									tileObject.get("width").getAsInt(),
-									tileObject.get("height").getAsInt()
-							)
-					);
+				if (obj.getAsJsonObject().get("Enabled").getAsBoolean()) {
+					JsonArray tiles = obj.getAsJsonObject().get("Tiles").getAsJsonArray();
+					for (JsonElement tile : tiles) { // Loop through each rectangle
+						JsonObject tileObject = tile.getAsJsonObject();
+						// Add each rectangle of tiles
+						Multi_MULTI_AREAS.add(
+								new Rectangle(
+										tileObject.get("x").getAsInt(),
+										tileObject.get("y").getAsInt(),
+										tileObject.get("width").getAsInt(),
+										tileObject.get("height").getAsInt()
+								)
+						);
+					}
 				}
 			}
 			UpdateSpearRanges(); // Once we're done, update Spear Ranges
