@@ -479,6 +479,14 @@
         ]
       },
       {
+        "Name": "Piscatoris Fishing Colony",
+        "Enabled": true,
+        "Notes": " - ",
+        "Tiles": [
+          {"x": 2303, "y": 3648, "width": 61, "height": 56}
+        ]
+      },
+      {
         "Name": "",
         "Enabled": true,
         "Notes": " - ",
