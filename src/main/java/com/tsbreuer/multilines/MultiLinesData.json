@@ -522,6 +522,22 @@
         ]
       },
       {
+        "Name": "Zulrah Island",
+        "Enabled": true,
+        "Notes": " - ",
+        "Tiles": [
+          {"x": 2261, "y": 3067, "width": 15, "height": 12}
+        ]
+      },
+      {
+        "Name": "Poison Waste",
+        "Enabled": true,
+        "Notes": " - ",
+        "Tiles": [
+          {"x": 2263, "y": 3086, "width": 40, "height": 16}
+        ]
+      },
+      {
         "Name": "",
         "Enabled": true,
         "Notes": " - ",
