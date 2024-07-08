@@ -487,6 +487,17 @@
         ]
       },
       {
+        "Name": "Fremmenik Isles",
+        "Enabled": true,
+        "Notes": " - ",
+        "Tiles": [
+          {"x": 2307, "y": 3824, "width": 15, "height": 80},
+          {"x": 2322, "y": 3822, "width": 13, "height": 82},
+          {"x": 2335, "y": 3821, "width": 33, "height": 83},
+          {"x": 2368, "y": 3840, "width": 59, "height": 64}
+        ]
+      },
+      {
         "Name": "",
         "Enabled": true,
         "Notes": " - ",
