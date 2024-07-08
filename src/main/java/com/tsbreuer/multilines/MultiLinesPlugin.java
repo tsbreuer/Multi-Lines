@@ -154,7 +154,7 @@ public class MultiLinesPlugin extends Plugin
 						client.addChatMessage(ChatMessageType.GAMEMESSAGE, "MultiLines", "Lastest Multi Lines Loaded from github", null);
 					});
 		}
-		catch (IOException | InterruptedException e) {
+		catch (IOException | InterruptedException | IllegalStateException e) {
 			clientThread.invokeLater(() -> {
 						client.addChatMessage(ChatMessageType.GAMEMESSAGE, "MultiLines", "Error Loading Multi Lines from GitHub", null);
 					});

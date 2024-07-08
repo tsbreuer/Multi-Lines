@@ -416,6 +416,22 @@
         ]
       },
       {
+        "Name": "Castle Wars",
+        "Enabled": true,
+        "Notes": " - ",
+        "Tiles": [
+          {"x": 2368, "y": 3072, "width": 64, "height": 64}
+        ]
+      },
+      {
+        "Name": "Jiggig",
+        "Enabled": true,
+        "Notes": " - ",
+        "Tiles": [
+          {"x": 2456, "y": 3035, "width": 37, "height": 24}
+        ]
+      },
+      {
         "Name": "ExampleArea Name (For reference)",
         "Enabled": true,
         "Notes": " - ",
