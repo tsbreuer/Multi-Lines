@@ -410,6 +410,14 @@
         ]
       },
       {
+        "Name": "Ogre boat feldip hills to karamja",
+        "Enabled": true,
+        "Notes": " - ",
+        "Tiles": [
+          {"x": 2648, "y": 2950, "width": 8, "height": 21}
+        ]
+      },
+      {
         "Name": "ExampleArea Name (For reference)",
         "Enabled": true,
         "Notes": " - ",
