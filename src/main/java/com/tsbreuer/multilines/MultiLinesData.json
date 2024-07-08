@@ -463,10 +463,19 @@
       {
         "Name": "MM2 Area north of gnome stronghold",
         "Enabled": true,
-        "Notes": " - ",
+        "Notes": "We map this twice since its a map link and the real tiles are north on the real map",
         "Tiles": [
           {"x": 1984, "y": 5568, "width": 46, "height": 59},
           {"x": 2432, "y": 3520, "width": 46, "height": 59}
+        ]
+      },
+      {
+        "Name": "Arandar",
+        "Enabled": true,
+        "Notes": " - ",
+        "Tiles": [
+          {"x": 2304, "y": 3328, "width": 65, "height": 65},
+          {"x": 2369, "y": 3311, "width": 25, "height": 17}
         ]
       },
       {
