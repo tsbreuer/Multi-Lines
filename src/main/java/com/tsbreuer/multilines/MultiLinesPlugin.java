@@ -47,10 +47,11 @@ import java.awt.*;
 import java.awt.geom.Area;
 import java.awt.geom.GeneralPath;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -109,15 +110,21 @@ public class MultiLinesPlugin extends Plugin
 		String githubURL = "https://raw.githubusercontent.com/tsbreuer/Multi-Lines/master/src/main/java/com/tsbreuer/multilines/MultiLinesData.json?_=" + System.currentTimeMillis();
 
 		try {
-			URL url = new URL(githubURL);
-			HttpURLConnection request = ( HttpURLConnection ) url.openConnection();
-			request.setUseCaches(false);
-			request.setDefaultUseCaches(false);
-			request.connect();
+			HttpClient hClient = HttpClient.newBuilder()
+					.version(HttpClient.Version.HTTP_1_1)
+					.followRedirects(HttpClient.Redirect.NORMAL)
+					.connectTimeout(Duration.ofSeconds(20))
+					.build();
 
+			HttpRequest request = HttpRequest.newBuilder()
+					.uri(URI.create(githubURL))
+					.timeout(Duration.ofSeconds(15))
+					.GET()
+					.build();
+			HttpResponse<String> response = hClient.send(request, HttpResponse.BodyHandlers.ofString());
 			// Convert to a JSON object to print data
 			JsonParser jp = new JsonParser(); //from gson
-			JsonElement root = jp.parse(new InputStreamReader((InputStream) request.getContent())); //Convert the input stream to a json element
+			JsonElement root = jp.parse(response.body()); //Convert response to a json element
 			//System.out.println(githubURL);
 			//System.out.println(root.toString()); // Debug connection info
 			JsonObject rootobj = root.getAsJsonObject();
@@ -139,21 +146,20 @@ public class MultiLinesPlugin extends Plugin
 					);
 				}
 			}
-			request.disconnect(); // We're done, lets close the request
 			UpdateSpearRanges(); // Once we're done, update Spear Ranges
 			//System.out.println("Multi Areas Updated");
 			clientThread.invokeLater(() -> {
 						client.addChatMessage(ChatMessageType.GAMEMESSAGE, "MultiLines", "Lastest Multi Lines Loaded from github", null);
 					});
 		}
-		catch (IOException e) {
+		catch (IOException | InterruptedException e) {
 			clientThread.invokeLater(() -> {
 						client.addChatMessage(ChatMessageType.GAMEMESSAGE, "MultiLines", "Error Loading Multi Lines from GitHub", null);
 					});
 
 			//System.out.println("Error Loading Multi Tiles from Github");;
 		}
-	}
+    }
 
 	public void UpdateSpearRanges()
 	{
