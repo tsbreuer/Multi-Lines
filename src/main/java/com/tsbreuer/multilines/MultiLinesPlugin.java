@@ -25,34 +25,32 @@
  */
 package com.tsbreuer.multilines;
 
-import com.google.common.collect.ImmutableList;
-import com.google.gson.*;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import com.google.inject.Provides;
 import net.runelite.api.ChatMessageType;
 import net.runelite.api.Client;
 import net.runelite.api.Constants;
 import net.runelite.api.Perspective;
 import net.runelite.api.coords.LocalPoint;
-import net.runelite.api.events.ChatMessage;
 import net.runelite.api.geometry.Geometry;
+import net.runelite.client.callback.ClientThread;
 import net.runelite.client.config.ConfigManager;
 import net.runelite.client.plugins.Plugin;
 import net.runelite.client.plugins.PluginDescriptor;
-import net.runelite.client.plugins.grounditems.GroundItemsConfig;
 import net.runelite.client.ui.overlay.OverlayManager;
-import net.runelite.client.callback.ClientThread;
 
 import javax.inject.Inject;
 import java.awt.*;
 import java.awt.geom.Area;
 import java.awt.geom.GeneralPath;
-import java.awt.geom.Line2D;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.net.MalformedURLException;
+import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -112,7 +110,7 @@ public class MultiLinesPlugin extends Plugin
 
 		try {
 			URL url = new URL(githubURL);
-			URLConnection request = url.openConnection();
+			HttpURLConnection request = ( HttpURLConnection ) url.openConnection();
 			request.setUseCaches(false);
 			request.setDefaultUseCaches(false);
 			request.connect();
@@ -120,6 +118,8 @@ public class MultiLinesPlugin extends Plugin
 			// Convert to a JSON object to print data
 			JsonParser jp = new JsonParser(); //from gson
 			JsonElement root = jp.parse(new InputStreamReader((InputStream) request.getContent())); //Convert the input stream to a json element
+			//System.out.println(githubURL);
+			//System.out.println(root.toString()); // Debug connection info
 			JsonObject rootobj = root.getAsJsonObject();
 			JsonObject MultiLines = rootobj.get("MultiLines").getAsJsonObject(); // Main object
 			JsonArray MultiAreas = MultiLines.get("Areas").getAsJsonArray(); // Areas List
@@ -139,6 +139,7 @@ public class MultiLinesPlugin extends Plugin
 					);
 				}
 			}
+			request.disconnect(); // We're done, lets close the request
 			UpdateSpearRanges(); // Once we're done, update Spear Ranges
 			//System.out.println("Multi Areas Updated");
 			clientThread.invokeLater(() -> {
