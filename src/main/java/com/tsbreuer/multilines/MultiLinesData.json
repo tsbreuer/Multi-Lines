@@ -402,7 +402,7 @@
       {
         "Name": "Pest Control",
         "Enabled": true,
-        "Notes": " - ",
+        "Notes": "There's no relevant tiles that benefit from multi warning but it may be unexpected - I think its disabled on dmm anyway",
         "Tiles": [
             {"x": 2616, "y": 2557, "width": 80, "height": 67}
         ]
@@ -417,8 +417,8 @@
       },
       {
         "Name": "Castle Wars",
-        "Enabled": true,
-        "Notes": " - ",
+        "Enabled": false,
+        "Notes": "There's no relevant tiles outside the minigame that benefit from the multi warning",
         "Tiles": [
           {"x": 2368, "y": 3072, "width": 64, "height": 64}
         ]
@@ -448,6 +448,16 @@
         "Tiles": [
           {"x": 2504, "y": 3208, "width": 48, "height": 24},
           {"x": 2504, "y": 3232, "width": 40, "height": 16}
+        ]
+      },
+      {
+        "Name": "Ranging guild",
+        "Enabled": true,
+        "Notes": " - ",
+        "Tiles": [
+          {"x": 2656, "y": 3408, "width": 24, "height": 40},
+          {"x": 2680, "y": 3416, "width": 8, "height": 24},
+          {"x": 2648, "y": 3416, "width": 8, "height": 24}
         ]
       },
       {
