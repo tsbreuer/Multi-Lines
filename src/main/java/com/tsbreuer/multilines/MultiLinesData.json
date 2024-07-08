@@ -699,10 +699,11 @@
         "Enabled": true,
         "Notes": " - ",
         "Tiles": [
+          {"x": 1739, "y": 3503, "width": 11, "height": 1},
           {"x": 1737, "y": 3486, "width": 14, "height": 17},
           {"x": 1751, "y": 3486, "width": 4, "height": 16},
           {"x": 1755, "y": 3487, "width": 2, "height": 14},
-          {"x": 1757, "y": 3490, "width": 1, "height": 7},
+          {"x": 1757, "y": 3490, "width": 1, "height": 6},
           {"x": 1758, "y": 3491, "width": 1, "height": 5},
           {"x": 1733, "y": 3487, "width": 4, "height": 13},
           {"x": 1732, "y": 3487, "width": 1, "height": 12}
