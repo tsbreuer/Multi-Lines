@@ -432,6 +432,25 @@
         ]
       },
       {
+        "Name": "Necromancer",
+        "Enabled": true,
+        "Notes": " - ",
+        "Tiles": [
+          {"x": 2664, "y": 3218, "width": 17, "height": 39},
+          {"x": 2656, "y": 3232, "width": 8, "height": 25}
+        ]
+
+      },
+      {
+        "Name": "Gnome Battlefield",
+        "Enabled": true,
+        "Notes": " - ",
+        "Tiles": [
+          {"x": 2504, "y": 3208, "width": 48, "height": 24},
+          {"x": 2504, "y": 3232, "width": 40, "height": 16}
+        ]
+      },
+      {
         "Name": "ExampleArea Name (For reference)",
         "Enabled": true,
         "Notes": " - ",
