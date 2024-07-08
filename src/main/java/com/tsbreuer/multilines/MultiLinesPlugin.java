@@ -108,7 +108,7 @@ public class MultiLinesPlugin extends Plugin
 
 	public void UpdateMultiLines(){
 		// Lookup lastest data
-		String githubURL = "https://raw.githubusercontent.com/tsbreuer/Multi-Lines/master/src/main/java/com/tsbreuer/multilines/MultiLinesData.json";
+		String githubURL = "https://raw.githubusercontent.com/tsbreuer/Multi-Lines/master/src/main/java/com/tsbreuer/multilines/MultiLinesData.json?_=" + System.currentTimeMillis();
 
 		try {
 			URL url = new URL(githubURL);
