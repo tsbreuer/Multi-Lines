@@ -538,6 +538,51 @@
         ]
       },
       {
+        "Name": "Soul Wars Minigame",
+        "Enabled": false,
+        "Notes": "Not really needed to be displayed since its a safe area and its already implied its multi",
+        "Tiles": [
+          {"x": 2117, "y": 2892, "width": 181, "height": 44},
+          {"x": 2298, "y": 2916, "width": 3, "height": 32},
+          {"x": 2301, "y": 2930, "width": 3, "height": 17},
+          {"x": 2275, "y": 2936, "width": 23, "height": 12},
+          {"x": 2272, "y": 2936, "width": 3, "height": 7},
+          {"x": 2154, "y": 2936, "width": 90, "height": 5},
+          {"x": 2178, "y": 2941, "width": 36, "height": 3},
+          {"x": 2118, "y": 2936, "width": 18, "height": 5},
+          {"x": 2115, "y": 2884, "width": 2, "height": 15},
+          {"x": 2117, "y": 2882, "width": 26, "height": 10},
+          {"x": 2153, "y": 2888, "width": 107, "height": 4},
+          {"x": 2269, "y": 2886, "width": 28, "height": 6},
+          {"x": 2284, "y": 2884, "width": 9, "height": 2},
+          {"x": 2182, "y": 2882, "width": 77, "height": 6},
+          {"x": 2174, "y": 2885, "width": 8, "height": 3},
+          {"x": 2191, "y": 2878, "width": 28, "height": 4}
+        ]
+      },
+      {
+        "Name": "Soul Wars island northern patch",
+        "Enabled": true,
+        "Notes": " - ",
+        "Tiles": [
+          {"x": 2176, "y": 2987, "width": 47, "height": 19},
+          {"x": 2177, "y": 2986, "width": 34, "height": 1},
+          {"x": 2178, "y": 2985, "width": 33, "height": 1},
+          {"x": 2179, "y": 2984, "width": 32, "height": 1},
+          {"x": 2180, "y": 2981, "width": 31, "height": 3},
+          {"x": 2180, "y": 2980, "width": 28, "height": 1},
+          {"x": 2180, "y": 2979, "width": 27, "height": 1},
+          {"x": 2183, "y": 2978, "width": 23, "height": 1},
+          {"x": 2185, "y": 2977, "width": 20, "height": 1},
+          {"x": 2186, "y": 2976, "width": 19, "height": 1},
+          {"x": 2187, "y": 2975, "width": 18, "height": 1},
+          {"x": 2192, "y": 2974, "width": 13, "height": 1},
+          {"x": 2192, "y": 2973, "width": 9, "height": 1},
+          {"x": 2192, "y": 2972, "width": 8, "height": 1},
+          {"x": 2192, "y": 2971, "width": 7, "height": 1}
+        ]
+      },
+      {
         "Name": "",
         "Enabled": true,
         "Notes": " - ",
