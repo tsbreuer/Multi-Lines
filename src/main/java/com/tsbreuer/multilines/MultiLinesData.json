@@ -386,9 +386,28 @@
           {"x": 2766, "y": 2936, "width": 57, "height": 1},
           {"x": 2767, "y": 2937, "width": 23, "height": 3},
           {"x": 2793, "y": 2937, "width": 6, "height": 2},
-          {"x": 2802, "y": 2937, "width": 13, "height": 3}
+          {"x": 2802, "y": 2937, "width": 13, "height": 3},
+          {"x": 2758, "y": 2935, "width": 6, "height": 1}
         ]
 
+      },
+      {
+        "Name": "Ape Atoll",
+        "Enabled": true,
+        "Notes": " - ",
+        "Tiles": [
+          {"x": 2688, "y": 2684, "width": 132, "height": 135}
+        ]
+      },
+      {
+        "Name": "Pest Control",
+        "Enabled": true,
+        "Notes": " - ",
+        "Tiles": [
+          [
+            {"x": 2616, "y": 2557, "width": 80, "height": 67}
+          ]
+        ]
       },
       {
         "Name": "ExampleArea Name (For reference)",
