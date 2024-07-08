@@ -498,6 +498,14 @@
         ]
       },
       {
+        "Name": "AJS Fairy ring penguin island (North of Miscenallia)",
+        "Enabled": true,
+        "Notes": " - ",
+        "Tiles": [
+          {"x": 2498, "y": 3892, "width": 10, "height": 9}
+        ]
+      },
+      {
         "Name": "",
         "Enabled": true,
         "Notes": " - ",
