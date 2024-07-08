@@ -113,6 +113,8 @@ public class MultiLinesPlugin extends Plugin
 		try {
 			URL url = new URL(githubURL);
 			URLConnection request = url.openConnection();
+			request.setUseCaches(false);
+			request.setDefaultUseCaches(false);
 			request.connect();
 
 			// Convert to a JSON object to print data
