@@ -474,8 +474,8 @@
         "Enabled": true,
         "Notes": " - ",
         "Tiles": [
-          {"x": 2304, "y": 3328, "width": 65, "height": 65},
-          {"x": 2369, "y": 3311, "width": 25, "height": 17}
+          {"x": 2304, "y": 3328, "width": 64, "height": 64},
+          {"x": 2368, "y": 3312, "width": 24, "height": 16}
         ]
       },
       {
