@@ -506,6 +506,22 @@
         ]
       },
       {
+        "Name": "Pirate's cove",
+        "Enabled": true,
+        "Notes": " - ",
+        "Tiles": [
+          {"x": 2180, "y": 3784, "width": 53, "height": 55}
+        ]
+      },
+      {
+        "Name": "Lunar Isle",
+        "Enabled": true,
+        "Notes": " - ",
+        "Tiles": [
+          {"x": 2056, "y": 3843, "width": 115, "height": 116}
+        ]
+      },
+      {
         "Name": "",
         "Enabled": true,
         "Notes": " - ",
