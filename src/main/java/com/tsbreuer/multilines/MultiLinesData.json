@@ -1387,15 +1387,52 @@
           {"x": 1595, "y": 2968, "width": 44, "height": 1},
           {"x": 1596, "y": 2969, "width": 42, "height": 1},
           {"x": 1597, "y": 2970, "width": 40, "height": 1},
-          {"x": 1598, "y": 2971, "width": 38, "height": 1}
+          {"x": 1597, "y": 2971, "width": 39, "height": 1}
         ]
       },
       {
-        "Name": "",
+        "Name": "The teomat",
         "Enabled": true,
         "Notes": " - ",
         "Tiles": [
-          {"x": 1, "y": 1, "width": 1, "height": 1}
+          {"x": 1445, "y": 3213, "width": 6, "height": 4},
+          {"x": 1442, "y": 3211, "width": 11, "height": 2},
+          {"x": 1431, "y": 3208, "width": 26, "height": 3},
+          {"x": 1433, "y": 3211, "width": 4, "height": 2},
+          {"x": 1433, "y": 3206, "width": 24, "height": 2},
+          {"x": 1437, "y": 3202, "width": 19, "height": 4},
+          {"x": 1437, "y": 3194, "width": 31, "height": 8},
+          {"x": 1435, "y": 3186, "width": 31, "height": 8},
+          {"x": 1427, "y": 3186, "width": 8, "height": 5},
+          {"x": 1425, "y": 3180, "width": 40, "height": 6},
+          {"x": 1423, "y": 3171, "width": 41, "height": 9},
+          {"x": 1419, "y": 3167, "width": 45, "height": 4},
+          {"x": 1421, "y": 3165, "width": 40, "height": 2},
+          {"x": 1422, "y": 3164, "width": 37, "height": 1},
+          {"x": 1426, "y": 3163, "width": 32, "height": 1},
+          {"x": 1428, "y": 3162, "width": 29, "height": 1},
+          {"x": 1429, "y": 3160, "width": 22, "height": 2},
+          {"x": 1427, "y": 3157, "width": 23, "height": 3},
+          {"x": 1423, "y": 3155, "width": 28, "height": 2},
+          {"x": 1421, "y": 3152, "width": 33, "height": 3},
+          {"x": 1419, "y": 3149, "width": 34, "height": 3},
+          {"x": 1416, "y": 3147, "width": 34, "height": 2},
+          {"x": 1416, "y": 3144, "width": 33, "height": 3},
+          {"x": 1419, "y": 3143, "width": 30, "height": 1},
+          {"x": 1420, "y": 3142, "width": 30, "height": 1},
+          {"x": 1420, "y": 3139, "width": 44, "height": 3},
+          {"x": 1419, "y": 3136, "width": 45, "height": 3},
+          {"x": 1418, "y": 3134, "width": 44, "height": 2},
+          {"x": 1417, "y": 3129, "width": 9, "height": 5},
+          {"x": 1418, "y": 3127, "width": 6, "height": 2},
+          {"x": 1420, "y": 3123, "width": 5, "height": 4},
+          {"x": 1448, "y": 3124, "width": 6, "height": 10},
+          {"x": 1445, "y": 3132, "width": 3, "height": 2},
+          {"x": 1447, "y": 3127, "width": 1, "height": 5},
+          {"x": 1454, "y": 3131, "width": 8, "height": 3},
+          {"x": 1454, "y": 3130, "width": 4, "height": 1},
+          {"x": 1454, "y": 3126, "width": 3, "height": 4},
+          {"x": 1449, "y": 3119, "width": 4, "height": 5}
         ]
       }
     ]

@@ -54,6 +54,7 @@ import java.net.http.HttpResponse;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 @PluginDescriptor(
 	name = "Multi Lines",
@@ -62,7 +63,7 @@ import java.util.List;
 )
 public class MultiLinesPlugin extends Plugin
 {
-	private List<Rectangle> Multi_MULTI_AREAS = new ArrayList<Rectangle>();
+	private List<Rectangle> Multi_MULTI_AREAS = new CopyOnWriteArrayList<Rectangle>();
 	private static final int SPEAR_RANGE = 4;
 
 	private Area MULTI_AREA = new Area();
@@ -96,7 +97,9 @@ public class MultiLinesPlugin extends Plugin
 	{
 		overlayManager.add(overlay);
 		config.setWarning("Warning, this plugin does not include Wilderness Multi Areas. Please use Wilderness Lines for that.");
-		UpdateMultiLines();
+		Thread lineUpdater = new Thread(UpdateMultiLines(Multi_MULTI_AREAS)); // Do the update off client thread
+		lineUpdater.start();
+
 	}
 
 	@Override
@@ -105,7 +108,7 @@ public class MultiLinesPlugin extends Plugin
 		overlayManager.remove(overlay);
 	}
 
-	public void UpdateMultiLines(){
+	public Runnable UpdateMultiLines(List<Rectangle> arrayListToUpdate){
 		// Lookup lastest data
 		String githubURL = "https://raw.githubusercontent.com/tsbreuer/Multi-Lines/master/src/main/java/com/tsbreuer/multilines/MultiLinesData.json?_=" + System.currentTimeMillis();
 
@@ -130,14 +133,14 @@ public class MultiLinesPlugin extends Plugin
 			JsonObject rootobj = root.getAsJsonObject();
 			JsonObject MultiLines = rootobj.get("MultiLines").getAsJsonObject(); // Main object
 			JsonArray MultiAreas = MultiLines.get("Areas").getAsJsonArray(); // Areas List
-			Multi_MULTI_AREAS = new ArrayList<Rectangle>(); // Clean existing Areas
+			List<Rectangle> tempArray = new ArrayList<Rectangle>(); // Clean existing Areas
 			for (JsonElement obj : MultiAreas){ // Map through each area to add tiles
 				if (obj.getAsJsonObject().get("Enabled").getAsBoolean()) {
 					JsonArray tiles = obj.getAsJsonObject().get("Tiles").getAsJsonArray();
 					for (JsonElement tile : tiles) { // Loop through each rectangle
 						JsonObject tileObject = tile.getAsJsonObject();
 						// Add each rectangle of tiles
-						Multi_MULTI_AREAS.add(
+						tempArray.add(
 								new Rectangle(
 										tileObject.get("x").getAsInt(),
 										tileObject.get("y").getAsInt(),
@@ -148,6 +151,8 @@ public class MultiLinesPlugin extends Plugin
 					}
 				}
 			}
+			arrayListToUpdate.clear();
+			arrayListToUpdate.addAll(tempArray);
 			UpdateSpearRanges(); // Once we're done, update Spear Ranges
 			//System.out.println("Multi Areas Updated");
 			clientThread.invokeLater(() -> {
@@ -161,6 +166,7 @@ public class MultiLinesPlugin extends Plugin
 
 			//System.out.println("Error Loading Multi Tiles from Github");;
 		}
+        return null;
     }
 
 	public void UpdateSpearRanges()
