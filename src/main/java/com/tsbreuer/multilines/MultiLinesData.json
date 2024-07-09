@@ -857,6 +857,26 @@
         "Enabled": true,
         "Notes": " - ",
         "Tiles": [
+          { "x": 1563, "y": 3815, "width": 33, "height": 10 },
+          { "x": 1569, "y": 3825, "width": 21, "height": 6 },
+          { "x": 1575, "y": 3831, "width": 9, "height": 7 },
+          { "x": 1569, "y": 3809, "width": 21, "height": 6 },
+          { "x": 1575, "y": 3802, "width": 9, "height": 7 }
+        ]
+      },
+      {
+        "Name": "",
+        "Enabled": true,
+        "Notes": " - ",
+        "Tiles": [
+          {"x": 1, "y": 1, "width": 1, "height": 1}
+        ]
+      },
+      {
+        "Name": "",
+        "Enabled": true,
+        "Notes": " - ",
+        "Tiles": [
           {"x": 1, "y": 1, "width": 1, "height": 1}
         ]
       },
