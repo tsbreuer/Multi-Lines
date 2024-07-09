@@ -7,4 +7,4 @@ This plugin is not meant to replace that plugin, this plugin is complementary an
 
 This plugin only provides non-wilderness multi lines.
 
-Currently only Weiss and Troll stronghold has been mapped. I plan to map all areas before DMM Armageddon Release.
+Currently only Varlamore and a few Kourend areas are missing. More are being mapped constantly.
