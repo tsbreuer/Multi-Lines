@@ -716,6 +716,37 @@
         ]
       },
       {
+        "Name": "Random Hosidius Multi areas like square, kitchen and fields",
+        "Enabled": true,
+        "Notes": " - ",
+        "Tiles": [
+          { "x": 1746, "y": 3521, "width": 13, "height": 5 },
+          { "x": 1759, "y": 3522, "width": 1, "height": 3 },
+          { "x": 1746, "y": 3526, "width": 10, "height": 1 },
+          { "x": 1747, "y": 3527, "width": 8, "height": 1 },
+          { "x": 1746, "y": 3544, "width": 7, "height": 13 },
+          { "x": 1747, "y": 3543, "width": 8, "height": 1 },
+          { "x": 1753, "y": 3545, "width": 5, "height": 11 },
+          { "x": 1753, "y": 3544, "width": 3, "height": 1 },
+          { "x": 1755, "y": 3591, "width": 16, "height": 16 },
+          { "x": 1737, "y": 3610, "width": 8, "height": 3 },
+          { "x": 1739, "y": 3613, "width": 6, "height": 10 },
+          { "x": 1737, "y": 3619, "width": 2, "height": 4 },
+          { "x": 1745, "y": 3618, "width": 5, "height": 3 },
+          { "x": 1745, "y": 3612, "width": 2, "height": 6 },
+          { "x": 1747, "y": 3612, "width": 3, "height": 3 },
+          { "x": 1746, "y": 3636, "width": 19, "height": 10 },
+          { "x": 1765, "y": 3636, "width": 1, "height": 9 },
+          { "x": 1766, "y": 3637, "width": 1, "height": 8 },
+          { "x": 1751, "y": 3634, "width": 5, "height": 1 },
+          { "x": 1746, "y": 3635, "width": 12, "height": 1 },
+          { "x": 1745, "y": 3639, "width": 1, "height": 5 },
+          { "x": 1744, "y": 3640, "width": 1, "height": 3 },
+          { "x": 1750, "y": 3646, "width": 10, "height": 1 },
+          { "x": 1762, "y": 3635, "width": 4, "height": 1 }
+        ]
+      },
+      {
         "Name": "",
         "Enabled": true,
         "Notes": " - ",
