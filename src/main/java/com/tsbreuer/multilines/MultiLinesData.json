@@ -753,6 +753,33 @@
         "Tiles": [
           {"x": 1, "y": 1, "width": 1, "height": 1}
         ]
+      },
+      {
+        "Name": "Piscarilius",
+        "Enabled": true,
+        "Notes": " - ",
+        "Tiles": [
+          { "x": 1760, "y": 3662, "width": 19, "height": 1 },
+          { "x": 1750, "y": 3663, "width": 29, "height": 1 },
+          { "x": 1750, "y": 3664, "width": 35, "height": 1 },
+          { "x": 1749, "y": 3665, "width": 36, "height": 1 },
+          { "x": 1747, "y": 3666, "width": 40, "height": 1 },
+          { "x": 1747, "y": 3667, "width": 41, "height": 1 },
+          { "x": 1747, "y": 3668, "width": 42, "height": 1 },
+          { "x": 1747, "y": 3669, "width": 43, "height": 1 },
+          { "x": 1747, "y": 3670, "width": 44, "height": 1 },
+          { "x": 1747, "y": 3671, "width": 46, "height": 1 },
+          { "x": 1747, "y": 3672, "width": 107, "height": 93 },
+          { "x": 1745, "y": 3679, "width": 2, "height": 30 },
+          { "x": 1743, "y": 3682, "width": 2, "height": 24 },
+          { "x": 1741, "y": 3684, "width": 2, "height": 19 },
+          { "x": 1739, "y": 3689, "width": 2, "height": 12 },
+          { "x": 1740, "y": 3723, "width": 7, "height": 77 },
+          { "x": 1743, "y": 3800, "width": 22, "height": 3 },
+          { "x": 1752, "y": 3803, "width": 10, "height": 3 },
+          { "x": 1747, "y": 3765, "width": 27, "height": 32 },
+          { "x": 1747, "y": 3797, "width": 26, "height": 3 }
+        ]
       }
     ]
   }
