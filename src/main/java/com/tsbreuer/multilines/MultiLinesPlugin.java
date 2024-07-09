@@ -55,6 +55,7 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.ScheduledExecutorService;
 
 @PluginDescriptor(
 	name = "Multi Lines",
@@ -81,6 +82,9 @@ public class MultiLinesPlugin extends Plugin
 	private Client client;
 
 	@Inject
+	private ScheduledExecutorService executor;
+
+	@Inject
 	private ClientThread clientThread;
 
 	@Inject
@@ -97,9 +101,9 @@ public class MultiLinesPlugin extends Plugin
 	{
 		overlayManager.add(overlay);
 		config.setWarning("Warning, this plugin does not include Wilderness Multi Areas. Please use Wilderness Lines for that.");
-		Thread lineUpdater = new Thread(UpdateMultiLines(Multi_MULTI_AREAS)); // Do the update off client thread
-		lineUpdater.start();
-
+		executor.execute(() ->
+						UpdateMultiLines(Multi_MULTI_AREAS)
+				);
 	}
 
 	@Override

@@ -1434,6 +1434,27 @@
           {"x": 1454, "y": 3126, "width": 3, "height": 4},
           {"x": 1449, "y": 3119, "width": 4, "height": 5}
         ]
+      },
+      {
+        "Name": "Sunset Coast",
+        "Enabled": true,
+        "Notes": " - ",
+        "Tiles": [
+          {"x": 1491, "y": 2978, "width": 54, "height": 15},
+          {"x": 1491, "y": 2975, "width": 50, "height": 3},
+          {"x": 1491, "y": 2965, "width": 48, "height": 10},
+          {"x": 1491, "y": 2993, "width": 53, "height": 1},
+          {"x": 1491, "y": 2994, "width": 52, "height": 1},
+          {"x": 1491, "y": 2995, "width": 51, "height": 1},
+          {"x": 1491, "y": 2996, "width": 50, "height": 1},
+          {"x": 1491, "y": 2997, "width": 49, "height": 1},
+          {"x": 1503, "y": 2998, "width": 36, "height": 1},
+          {"x": 1504, "y": 2999, "width": 34, "height": 1},
+          {"x": 1505, "y": 3000, "width": 30, "height": 1},
+          {"x": 1508, "y": 3001, "width": 25, "height": 1},
+          {"x": 1510, "y": 3002, "width": 21, "height": 1},
+          {"x": 1514, "y": 3003, "width": 12, "height": 3}
+        ]
       }
     ]
   }
