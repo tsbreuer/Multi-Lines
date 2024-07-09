@@ -706,11 +706,13 @@
         "Enabled": true,
         "Notes": "Hard to tell real multi tiles due to game obstacles",
         "Tiles": [
-          { "x": 1767, "y": 3500, "width": 18, "height": 10 },
+          { "x": 1768, "y": 3500, "width": 16, "height": 10 },
+          { "x": 1767, "y": 3501, "width": 1, "height": 9 },
+          { "x": 1784, "y": 3506, "width": 1, "height": 4 },
           { "x": 1768, "y": 3510, "width": 16, "height": 2 },
           { "x": 1773, "y": 3512, "width": 4, "height": 2 },
           { "x": 1777, "y": 3512, "width": 4, "height": 1 },
-          { "x": 1770, "y": 3499, "width": 14, "height": 1 }
+          { "x": 1774, "y": 3499, "width": 10, "height": 1 }
         ]
       },
       {
