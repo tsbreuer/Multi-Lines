@@ -1060,12 +1060,20 @@
         ]
       },
       {
-        "Name": "",
+        "Name": "Shayzien Lizardman Canyon",
         "Enabled": true,
         "Notes": " - ",
         "Tiles": [
-          {"x": 1, "y": 1, "width": 1, "height": 1}
+          { "x": 1414, "y": 3690, "width": 46, "height": 37 },
+          { "x": 1471, "y": 3687, "width": 31, "height": 40 },
+          { "x": 1502, "y": 3704, "width": 10, "height": 21 },
+          { "x": 1502, "y": 3703, "width": 9, "height": 1 },
+          { "x": 1502, "y": 3702, "width": 8, "height": 1 },
+          { "x": 1502, "y": 3697, "width": 3, "height": 5 },
+          { "x": 1505, "y": 3699, "width": 2, "height": 3 },
+          { "x": 1502, "y": 3695, "width": 2, "height": 2 }
         ]
+
       },
       {
         "Name": "",
