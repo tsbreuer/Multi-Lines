@@ -139,7 +139,7 @@ public class MultiLinesPlugin extends Plugin
 			JsonArray MultiAreas = MultiLines.get("Areas").getAsJsonArray(); // Areas List
 			List<Rectangle> tempArray = new ArrayList<Rectangle>(); // Clean existing Areas
 			for (JsonElement obj : MultiAreas){ // Map through each area to add tiles
-				if (obj.getAsJsonObject().get("Enabled").getAsBoolean()) {
+				if (obj.getAsJsonObject().get("Enabled").getAsBoolean() && !obj.getAsJsonObject().get("Disabled").getAsBoolean() && !obj.getAsJsonObject().get("Wilderness").getAsBoolean()) {
 					JsonArray tiles = obj.getAsJsonObject().get("Tiles").getAsJsonArray();
 					for (JsonElement tile : tiles) { // Loop through each rectangle
 						JsonObject tileObject = tile.getAsJsonObject();

@@ -3,7 +3,9 @@
     "Areas": [
       {
         "Name": "Weiss",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           { "x": 2852, "y": 3922, "width": 40, "height": 25 },
@@ -35,7 +37,9 @@
       },
       {
         "Name": "Troll Stronghold / GWD",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           { "x": 2880, "y": 3742, "width": 32, "height": 22 },
@@ -47,7 +51,9 @@
       },
       {
         "Name": "Death Plateau",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           { "x": 2848, "y": 3601, "width": 31, "height": 6 },
@@ -58,7 +64,9 @@
       },
       {
         "Name": "Buthorpe / White Wolf Mountain",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           { "x": 2880, "y": 3520, "width": 24, "height": 24 },
@@ -68,7 +76,9 @@
       },
       {
         "Name": "Falador chaos altar",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           {"x":2928,"y":3512,"width":16,"height":8}
@@ -77,7 +87,9 @@
       },
       {
         "Name": "Falador",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           {"x":2944,"y":3304,"width":64,"height":152},
@@ -95,7 +107,9 @@
       },
       {
         "Name": "Barbarian village",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           {"x": 3072, "y": 3448, "width": 64, "height": 8},
@@ -106,7 +120,9 @@
       },
       {
         "Name": "Draynor Jail",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           {"x": 3102, "y": 3248, "width": 2, "height": 3},
@@ -128,7 +144,9 @@
       },
       {
         "Name": "Wizard Tower",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           {"x": 3094, "y": 3145, "width": 31, "height": 31},
@@ -137,7 +155,9 @@
       },
       {
         "Name": "Al Kharid",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           {"x": 3264, "y": 3136, "width": 64, "height": 64}
@@ -145,7 +165,9 @@
       },
       {
         "Name": "Mort Myre swamp",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           {"x": 3456, "y": 3328, "width": 64, "height": 64}
@@ -153,7 +175,9 @@
       },
       {
         "Name": "Burgh de rott",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           {"x": 3512, "y": 3232, "width": 8, "height": 16}
@@ -162,7 +186,9 @@
       },
       {
         "Name": "South from burgh",
+        "Removed": true,
         "Enabled": false,
+        "Wilderness": false,
         "Notes": "Doesnt seem to be multi on normal worlds, might be on DMM",
         "Tiles": [
           {"x": 3520, "y": 3158, "width": 66, "height": 42},
@@ -171,7 +197,9 @@
       },
       {
         "Name": "South east of port phasmatys",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           {"x": 3694, "y": 3433, "width": 15, "height": 20},
@@ -188,7 +216,9 @@
       },
       {
         "Name": "south west of port phasmatys",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           {"x": 3589, "y": 3451, "width": 54, "height": 5},
@@ -209,7 +239,9 @@
       },
       {
         "Name": "Past Bridge south of port phasmatys",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           {"x": 3589, "y": 3408, "width": 19, "height": 4},
@@ -224,7 +256,9 @@
       },
       {
         "Name": "Top left of fossil island",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           {"x": 3653, "y": 3868, "width": 10, "height": 17},
@@ -233,7 +267,9 @@
       },
       {
         "Name": "Bottom left of fossil island",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           {"x": 3801, "y": 3751, "width": 2, "height": 11},
@@ -249,7 +285,9 @@
       },
       {
         "Name": "Top main beach of fossil island",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": "Holy fuck jagex what the fuck is this multi zone mapping",
         "Tiles": [
           {"x": 3684, "y": 3896, "width": 2, "height": 1},
@@ -295,7 +333,9 @@
       },
       {
         "Name": "Rellekka",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           {"x": 2650, "y": 3712, "width": 86, "height": 16},
@@ -305,7 +345,9 @@
       },
       {
         "Name": "Settlement Ruins Kourend",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": "Pending rework to reduce rectangles used",
         "Tiles": [
           {"x": 1536, "y": 3875, "width": 35, "height": 33},
@@ -372,7 +414,9 @@
       },
       {
         "Name": "Kharazi Jungle",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           {"x": 2875, "y": 2890, "width": 5, "height": 49},
@@ -393,7 +437,9 @@
       },
       {
         "Name": "Ape Atoll",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           {"x": 2688, "y": 2684, "width": 132, "height": 135}
@@ -401,7 +447,9 @@
       },
       {
         "Name": "Pest Control",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": "There's no relevant tiles that benefit from multi warning but it may be unexpected - I think its disabled on dmm anyway",
         "Tiles": [
             {"x": 2616, "y": 2557, "width": 80, "height": 67}
@@ -409,7 +457,9 @@
       },
       {
         "Name": "Ogre boat feldip hills to karamja",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           {"x": 2648, "y": 2950, "width": 8, "height": 21}
@@ -417,7 +467,9 @@
       },
       {
         "Name": "Castle Wars",
+        "Removed": false,
         "Enabled": false,
+        "Wilderness": false,
         "Notes": "There's no relevant tiles outside the minigame that benefit from the multi warning",
         "Tiles": [
           {"x": 2368, "y": 3072, "width": 64, "height": 64}
@@ -425,7 +477,9 @@
       },
       {
         "Name": "Jiggig",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           {"x": 2456, "y": 3035, "width": 37, "height": 24}
@@ -433,7 +487,9 @@
       },
       {
         "Name": "Necromancer",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           {"x": 2664, "y": 3218, "width": 17, "height": 39},
@@ -443,7 +499,9 @@
       },
       {
         "Name": "Gnome Battlefield",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           {"x": 2504, "y": 3208, "width": 48, "height": 24},
@@ -452,7 +510,9 @@
       },
       {
         "Name": "Ranging guild",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           {"x": 2656, "y": 3408, "width": 24, "height": 40},
@@ -462,7 +522,9 @@
       },
       {
         "Name": "MM2 Area north of gnome stronghold",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": "We map this twice since its a map link and the real tiles are north on the real map",
         "Tiles": [
           {"x": 1984, "y": 5568, "width": 46, "height": 59},
@@ -471,7 +533,9 @@
       },
       {
         "Name": "Arandar",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           {"x": 2304, "y": 3328, "width": 64, "height": 64},
@@ -480,7 +544,9 @@
       },
       {
         "Name": "Piscatoris Fishing Colony",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           {"x": 2303, "y": 3648, "width": 61, "height": 56}
@@ -488,7 +554,9 @@
       },
       {
         "Name": "Fremmenik Isles",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           {"x": 2307, "y": 3824, "width": 15, "height": 80},
@@ -499,7 +567,9 @@
       },
       {
         "Name": "AJS Fairy ring penguin island (North of Miscenallia)",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           {"x": 2498, "y": 3892, "width": 10, "height": 9}
@@ -507,7 +577,9 @@
       },
       {
         "Name": "Pirate's cove",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           {"x": 2180, "y": 3784, "width": 53, "height": 55}
@@ -515,7 +587,9 @@
       },
       {
         "Name": "Lunar Isle",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           {"x": 2056, "y": 3843, "width": 115, "height": 116}
@@ -523,7 +597,9 @@
       },
       {
         "Name": "Zulrah Island",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           {"x": 2261, "y": 3067, "width": 15, "height": 12}
@@ -531,7 +607,9 @@
       },
       {
         "Name": "Poison Waste",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           {"x": 2263, "y": 3086, "width": 40, "height": 16}
@@ -539,7 +617,9 @@
       },
       {
         "Name": "Soul Wars Minigame",
+        "Removed": false,
         "Enabled": false,
+        "Wilderness": false,
         "Notes": "Not really needed to be displayed since its a safe area and its already implied its multi",
         "Tiles": [
           {"x": 2117, "y": 2892, "width": 181, "height": 44},
@@ -562,7 +642,9 @@
       },
       {
         "Name": "Soul Wars island northern patch",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           {"x": 2176, "y": 2987, "width": 47, "height": 19},
@@ -584,7 +666,9 @@
       },
       {
         "Name": "Kourend Sand crabs",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": "Holy jesus christ this one took a while",
         "Tiles": [
           {"x": 1695, "y": 3401, "width": 190, "height": 67},
@@ -688,7 +772,9 @@
       },
       {
         "Name": "Altar north of sand crabs",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           {"x": 1739, "y": 3503, "width": 11, "height": 1},
@@ -703,7 +789,9 @@
       },
       {
         "Name": "Hosidius Mine",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": "Hard to tell real multi tiles due to game obstacles",
         "Tiles": [
           { "x": 1768, "y": 3500, "width": 16, "height": 10 },
@@ -717,7 +805,9 @@
       },
       {
         "Name": "Random Hosidius Multi areas like square, kitchen and fields",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           { "x": 1746, "y": 3521, "width": 13, "height": 5 },
@@ -748,7 +838,9 @@
       },
       {
         "Name": "Piscarilius",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           { "x": 1760, "y": 3662, "width": 19, "height": 1 },
@@ -775,7 +867,9 @@
       },
       {
         "Name": "Arceus main area",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           { "x": 1719, "y": 3777, "width": 6, "height": 10 },
@@ -854,7 +948,9 @@
       },
       {
         "Name": "Tower of Magic Arceus",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           { "x": 1563, "y": 3815, "width": 33, "height": 10 },
@@ -866,7 +962,9 @@
       },
       {
         "Name": "Lovakengj",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           { "x": 1513, "y": 3829, "width": 8, "height": 10 },
@@ -885,7 +983,9 @@
       },
       {
         "Name": "Kourend Castle",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           { "x": 1654, "y": 3666, "width": 1, "height": 15 },
@@ -909,7 +1009,9 @@
       },
       {
         "Name": "One weird hosidius house",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           { "x": 1634, "y": 3606, "width": 14, "height": 8 }
@@ -917,7 +1019,9 @@
       },
       {
         "Name": "Forthos dungeon, saltpetre mine & woodcutting guild",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           { "x": 1668, "y": 3496, "width": 15, "height": 96 },
@@ -977,7 +1081,9 @@
       },
       {
         "Name": "Barbarian Camp near land's end",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           { "x": 1579, "y": 3429, "width": 3, "height": 10 },
@@ -992,7 +1098,9 @@
       },
       {
         "Name": "Land's End",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           { "x": 1497, "y": 3410, "width": 26, "height": 5 },
@@ -1022,7 +1130,9 @@
       },
       {
         "Name": "Graveyard of Heroes (Shayzien)",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           { "x": 1475, "y": 3544, "width": 11, "height": 37 },
@@ -1047,7 +1157,9 @@
       },
       {
         "Name": "Building south of giant's pit",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           { "x": 1435, "y": 3588, "width": 10, "height": 10 },
@@ -1061,7 +1173,9 @@
       },
       {
         "Name": "Shayzien Lizardman Canyon",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           { "x": 1414, "y": 3690, "width": 46, "height": 37 },
@@ -1077,7 +1191,9 @@
       },
       {
         "Name": "Shayzien Wall",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           { "x": 1359, "y": 3519, "width": 53, "height": 23 },
@@ -1149,7 +1265,9 @@
       },
       {
         "Name": "South of Mount Quidamortem",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           {"x": 1221, "y": 3524, "width": 6, "height": 12},
@@ -1226,8 +1344,10 @@
       },
       {
         "Name": "Stranglewood (DT 2 Area)",
+        "Removed": false,
         "Enabled": true,
         "Notes": " - ",
+        "Wilderness": false,
         "Tiles": [
           {"x": 1090, "y": 3263, "width": 76, "height": 192},
           {"x": 1166, "y": 3360, "width": 39, "height": 95},
@@ -1263,7 +1383,9 @@
       },
       {
         "Name": "Fortis Colosseum",
+        "Removed": false,
         "Enabled": false,
+        "Wilderness": false,
         "Notes": "Since this is an instanced area there's no point marking it multi unless in the future that changes.",
         "Tiles": [
           {"x": 1819, "y": 3089, "width": 4, "height": 36},
@@ -1300,7 +1422,9 @@
       },
       {
         "Name": "Varlamore Wolf Den",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           {"x": 1494, "y": 3119, "width": 13, "height": 16},
@@ -1313,7 +1437,9 @@
       },
       {
         "Name": "Varlamore Main Palace Area",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           {"x": 1637, "y": 3132, "width": 9, "height": 40},
@@ -1347,7 +1473,9 @@
       },
       {
         "Name": "Varlamore Colossal Remains Area",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           {"x": 1663, "y": 2883, "width": 73, "height": 61},
@@ -1392,7 +1520,9 @@
       },
       {
         "Name": "The teomat",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           {"x": 1445, "y": 3213, "width": 7, "height": 5},
@@ -1437,7 +1567,9 @@
       },
       {
         "Name": "Sunset Coast",
+        "Removed": false,
         "Enabled": true,
+        "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           {"x": 1491, "y": 2978, "width": 54, "height": 15},
@@ -1453,6 +1585,17 @@
           {"x": 1505, "y": 3000, "width": 30, "height": 1},
           {"x": 1508, "y": 3001, "width": 25, "height": 1},
           {"x": 1510, "y": 3002, "width": 21, "height": 1},
+          {"x": 1514, "y": 3003, "width": 12, "height": 3}
+        ]
+      }
+    ,
+      {
+        "Name": "Sunset Coast",
+        "Removed": false,
+        "Enabled": true,
+        "Wilderness": false,
+        "Notes": " - ",
+        "Tiles": [
           {"x": 1514, "y": 3003, "width": 12, "height": 3}
         ]
       }
