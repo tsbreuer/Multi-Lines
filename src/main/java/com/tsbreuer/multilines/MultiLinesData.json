@@ -1225,6 +1225,51 @@
         ]
       },
       {
+        "Name": "Stranglewood (DT 2 Area)",
+        "Enabled": true,
+        "Notes": " - ",
+        "Tiles": [
+          {"x": 1090, "y": 3263, "width": 76, "height": 192},
+          {"x": 1166, "y": 3360, "width": 39, "height": 95},
+          {"x": 1166, "y": 3354, "width": 36, "height": 6},
+          {"x": 1166, "y": 3349, "width": 34, "height": 5},
+          {"x": 1166, "y": 3345, "width": 32, "height": 4},
+          {"x": 1184, "y": 3343, "width": 9, "height": 2},
+          {"x": 1166, "y": 3342, "width": 10, "height": 3},
+          {"x": 1166, "y": 3340, "width": 4, "height": 2},
+          {"x": 1205, "y": 3364, "width": 4, "height": 68},
+          {"x": 1209, "y": 3367, "width": 5, "height": 64},
+          {"x": 1214, "y": 3372, "width": 5, "height": 49},
+          {"x": 1219, "y": 3372, "width": 4, "height": 45},
+          {"x": 1223, "y": 3372, "width": 5, "height": 38},
+          {"x": 1235, "y": 3390, "width": 2, "height": 10},
+          {"x": 1228, "y": 3390, "width": 7, "height": 13},
+          {"x": 1228, "y": 3403, "width": 4, "height": 4},
+          {"x": 1228, "y": 3370, "width": 4, "height": 20},
+          {"x": 1166, "y": 3263, "width": 3, "height": 73},
+          {"x": 1169, "y": 3263, "width": 3, "height": 70},
+          {"x": 1172, "y": 3263, "width": 4, "height": 66},
+          {"x": 1176, "y": 3263, "width": 2, "height": 63},
+          {"x": 1178, "y": 3320, "width": 1, "height": 5},
+          {"x": 1179, "y": 3321, "width": 1, "height": 3},
+          {"x": 1178, "y": 3298, "width": 6, "height": 19},
+          {"x": 1178, "y": 3317, "width": 5, "height": 1},
+          {"x": 1184, "y": 3303, "width": 3, "height": 11},
+          {"x": 1187, "y": 3304, "width": 1, "height": 5},
+          {"x": 1178, "y": 3263, "width": 13, "height": 35},
+          {"x": 1191, "y": 3263, "width": 2, "height": 33},
+          {"x": 1193, "y": 3263, "width": 1, "height": 17}
+        ]
+      },
+      {
+        "Name": "",
+        "Enabled": true,
+        "Notes": " - ",
+        "Tiles": [
+          {"x": 1, "y": 1, "width": 1, "height": 1}
+        ]
+      },
+      {
         "Name": "",
         "Enabled": true,
         "Notes": " - ",
