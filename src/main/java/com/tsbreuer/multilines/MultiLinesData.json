@@ -1046,11 +1046,17 @@
         ]
       },
       {
-        "Name": "",
+        "Name": "Building south of giant's pit",
         "Enabled": true,
         "Notes": " - ",
         "Tiles": [
-          {"x": 1, "y": 1, "width": 1, "height": 1}
+          { "x": 1435, "y": 3588, "width": 10, "height": 10 },
+          { "x": 1438, "y": 3587, "width": 7, "height": 1 },
+          { "x": 1439, "y": 3584, "width": 4, "height": 3 },
+          { "x": 1427, "y": 3591, "width": 8, "height": 5 },
+          { "x": 1428, "y": 3590, "width": 7, "height": 1 },
+          { "x": 1426, "y": 3591, "width": 1, "height": 4 },
+          { "x": 1425, "y": 3592, "width": 1, "height": 2 }
         ]
       },
       {
