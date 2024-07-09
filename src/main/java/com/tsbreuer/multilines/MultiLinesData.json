@@ -1038,11 +1038,11 @@
           { "x": 1496, "y": 3544, "width": 1, "height": 17 },
           { "x": 1497, "y": 3544, "width": 19, "height": 16 },
           { "x": 1516, "y": 3544, "width": 4, "height": 11 },
-          { "x": 1499, "y": 3560, "width": 17, "height": 1 },
+          { "x": 1499, "y": 3560, "width": 18, "height": 1 },
           { "x": 1502, "y": 3562, "width": 15, "height": 1 },
           { "x": 1502, "y": 3561, "width": 14, "height": 1 },
           { "x": 1503, "y": 3563, "width": 14, "height": 1 },
-          { "x": 1502, "y": 3564, "width": 14, "height": 8 }
+          { "x": 1502, "y": 3564, "width": 15, "height": 8 }
         ]
       },
       {
@@ -1057,6 +1057,22 @@
           { "x": 1428, "y": 3590, "width": 7, "height": 1 },
           { "x": 1426, "y": 3591, "width": 1, "height": 4 },
           { "x": 1425, "y": 3592, "width": 1, "height": 2 }
+        ]
+      },
+      {
+        "Name": "",
+        "Enabled": true,
+        "Notes": " - ",
+        "Tiles": [
+          {"x": 1, "y": 1, "width": 1, "height": 1}
+        ]
+      },
+      {
+        "Name": "",
+        "Enabled": true,
+        "Notes": " - ",
+        "Tiles": [
+          {"x": 1, "y": 1, "width": 1, "height": 1}
         ]
       },
       {
