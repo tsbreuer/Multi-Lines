@@ -1587,16 +1587,183 @@
           {"x": 1510, "y": 3002, "width": 21, "height": 1},
           {"x": 1514, "y": 3003, "width": 12, "height": 3}
         ]
-      }
-    ,
+      },
       {
-        "Name": "Sunset Coast",
+        "Name": "Dark warrior's palace",
         "Removed": false,
-        "Enabled": true,
-        "Wilderness": false,
+        "Enabled": false,
+        "Wilderness": true,
+        "Notes": "Dark warrior's palace",
+        "Tiles": [
+          { "x": 3008, "y": 3600, "width": 64, "height": 112 }
+        ]
+      },
+      {
+        "Name": "Rev caves",
+        "Removed": false,
+        "Enabled": false,
+        "Wilderness": true,
+        "Notes": "Two tiles next to southern rev caves entrance which used to be a BH 'singles' lure spot",
+        "Tiles": [
+          { "x": 3072, "y": 3654, "width": 1, "height": 2 }
+        ]
+      },
+      {
+        "Name": "Chaos altar",
+        "Removed": false,
+        "Enabled": false,
+        "Wilderness": true,
         "Notes": " - ",
         "Tiles": [
-          {"x": 1514, "y": 3003, "width": 12, "height": 3}
+          { "x": 2946, "y": 3816, "width": 14, "height": 16 }
+        ]
+      },
+      {
+        "Name": "Wilderness agility course",
+        "Removed": false,
+        "Enabled": false,
+        "Wilderness": true,
+        "Notes": "Balance crossing to wilderness agility course",
+        "Tiles": [
+          { "x": 2984, "y": 3912, "width": 24, "height": 16 }
+        ]
+      },
+      {
+        "Name": "North of kbd entrance",
+        "Removed": false,
+        "Enabled": false,
+        "Wilderness": true,
+        "Notes": " - ",
+        "Tiles": [
+          { "x": 3008, "y": 3856, "width": 40, "height": 48 }
+        ]
+      },
+      {
+        "Name": "KBD",
+        "Removed": false,
+        "Enabled": false,
+        "Wilderness": true,
+        "Notes": "Two tiles NE of kbd entrance cage",
+        "Tiles": [
+          { "x": 3021, "y": 3855, "width": 2, "height": 1 }
+        ]
+      },
+      {
+        "Name": "North of Rune Rocks",
+        "Removed": false,
+        "Enabled": false,
+        "Wilderness": true,
+        "Notes": " - ",
+        "Tiles": [
+          { "x": 3048, "y": 3896, "width": 24, "height": 8 }
+        ]
+      },
+      {
+        "Name": "North of lava maze",
+        "Removed": false,
+        "Enabled": false,
+        "Wilderness": true,
+        "Notes": " - ",
+        "Tiles": [
+          { "x": 3072, "y": 3880, "width": 64, "height": 24 }
+        ]
+      },
+      {
+        "Name": "Northeast f2p wilderness",
+        "Removed": false,
+        "Enabled": false,
+        "Wilderness": true,
+        "Notes": " - ",
+        "Tiles": [
+          { "x": 3136, "y": 3840, "width": 256, "height": 64 }
+        ]
+      },
+      {
+        "Name": "Northeast p2p wilderness",
+        "Removed": false,
+        "Enabled": false,
+        "Wilderness": true,
+        "Notes": " - ",
+        "Tiles": [
+          { "x": 3200, "y": 3904, "width": 192, "height": 64 }
+        ]
+      },
+      {
+        "Name": "North-mid east f2p wilderness",
+        "Removed": false,
+        "Enabled": false,
+        "Wilderness": true,
+        "Notes": " - ",
+        "Tiles": [
+          { "x": 3152, "y": 3752, "width": 176, "height": 88 }
+        ]
+      },
+      {
+        "Name": "East f2p wilderness",
+        "Removed": false,
+        "Enabled": false,
+        "Wilderness": true,
+        "Notes": " - ",
+        "Tiles": [
+          { "x": 3192, "y": 3525, "width": 136, "height": 227 }
+        ]
+      },
+      {
+        "Name": "Small east f2p wilderness strip NE of lumberyard",
+        "Removed": false,
+        "Enabled": false,
+        "Wilderness": true,
+        "Notes": " - ",
+        "Tiles": [
+          { "x": 3328, "y": 3525, "width": 17, "height": 18 }
+        ]
+      },
+      {
+        "Name": "One silly tile that used to be a BH 'singles' lure spot",
+        "Removed": false,
+        "Enabled": false,
+        "Wilderness": true,
+        "Notes": " - ",
+        "Tiles": [
+          { "x": 3191, "y": 3689, "width": 1, "height": 1 }
+        ]
+      },
+      {
+        "Name": "Wilderness north of Grand Exchange",
+        "Removed": false,
+        "Enabled": false,
+        "Wilderness": true,
+        "Notes": " - ",
+        "Tiles": [
+          { "x": 3136, "y": 3525, "width": 56, "height": 59 }
+        ]
+      },
+      {
+        "Name": "Ferox Enclave",
+        "Removed": false,
+        "Enabled": false,
+        "Wilderness": true,
+        "Notes": " - ",
+        "Tiles": [
+          { "x": 3152, "y": 3584, "width": 40, "height": 36 },
+          { "x": 3146, "y": 3598, "width": 6, "height": 22 },
+          { "x": 3147, "y": 3596, "width": 5, "height": 2 },
+          { "x": 3149, "y": 3595, "width": 3, "height": 1 },
+          { "x": 3150, "y": 3594, "width": 2, "height": 1 },
+          { "x": 3151, "y": 3593, "width": 1, "height": 1 },
+          { "x": 3152, "y": 3620, "width": 10, "height": 6 },
+          { "x": 3187, "y": 3620, "width": 5, "height": 28 },
+          { "x": 3176, "y": 3636, "width": 11, "height": 12 }
+        ]
+      },
+      {
+        "Name": "Ferox Enclave extra",
+        "Removed": false,
+        "Enabled": false,
+        "Wilderness": true,
+        "Notes": "One separate tile north of bridge east of ferox",
+        "Tiles": [
+          { "x": 3175, "y": 3647, "width": 1, "height": 1 }
         ]
       }
     ]
