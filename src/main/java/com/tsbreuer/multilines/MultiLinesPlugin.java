@@ -25,36 +25,37 @@
  */
 package com.tsbreuer.multilines;
 
-import com.google.common.collect.ImmutableList;
-import com.google.gson.*;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import com.google.inject.Provides;
 import net.runelite.api.ChatMessageType;
 import net.runelite.api.Client;
 import net.runelite.api.Constants;
 import net.runelite.api.Perspective;
 import net.runelite.api.coords.LocalPoint;
-import net.runelite.api.events.ChatMessage;
 import net.runelite.api.geometry.Geometry;
+import net.runelite.client.callback.ClientThread;
 import net.runelite.client.config.ConfigManager;
 import net.runelite.client.plugins.Plugin;
 import net.runelite.client.plugins.PluginDescriptor;
-import net.runelite.client.plugins.grounditems.GroundItemsConfig;
 import net.runelite.client.ui.overlay.OverlayManager;
-import net.runelite.client.callback.ClientThread;
 
 import javax.inject.Inject;
 import java.awt.*;
 import java.awt.geom.Area;
 import java.awt.geom.GeneralPath;
-import java.awt.geom.Line2D;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLConnection;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.ScheduledExecutorService;
 
 @PluginDescriptor(
 	name = "Multi Lines",
@@ -63,7 +64,7 @@ import java.util.List;
 )
 public class MultiLinesPlugin extends Plugin
 {
-	private List<Rectangle> Multi_MULTI_AREAS = new ArrayList<Rectangle>();
+	private List<Rectangle> Multi_MULTI_AREAS = new CopyOnWriteArrayList<Rectangle>();
 	private static final int SPEAR_RANGE = 4;
 
 	private Area MULTI_AREA = new Area();
@@ -79,6 +80,9 @@ public class MultiLinesPlugin extends Plugin
 
 	@Inject
 	private Client client;
+
+	@Inject
+	private ScheduledExecutorService executor;
 
 	@Inject
 	private ClientThread clientThread;
@@ -97,7 +101,9 @@ public class MultiLinesPlugin extends Plugin
 	{
 		overlayManager.add(overlay);
 		config.setWarning("Warning, this plugin does not include Wilderness Multi Areas. Please use Wilderness Lines for that.");
-		UpdateMultiLines();
+		executor.execute(() ->
+						UpdateMultiLines(Multi_MULTI_AREAS)
+				);
 	}
 
 	@Override
@@ -106,51 +112,70 @@ public class MultiLinesPlugin extends Plugin
 		overlayManager.remove(overlay);
 	}
 
-	public void UpdateMultiLines(){
+	public Runnable UpdateMultiLines(List<Rectangle> arrayListToUpdate){
 		// Lookup lastest data
-		String githubURL = "https://raw.githubusercontent.com/tsbreuer/Multi-Lines/master/src/main/java/com/tsbreuer/multilines/MultiLinesData.json";
+		String githubURL = "https://raw.githubusercontent.com/tsbreuer/Multi-Lines/master/src/main/java/com/tsbreuer/multilines/MultiLinesData.json?_=" + System.currentTimeMillis();
 
 		try {
-			URL url = new URL(githubURL);
-			URLConnection request = url.openConnection();
-			request.connect();
+			HttpClient hClient = HttpClient.newBuilder()
+					.version(HttpClient.Version.HTTP_1_1)
+					.followRedirects(HttpClient.Redirect.NORMAL)
+					.connectTimeout(Duration.ofSeconds(20))
+					.build();
 
+			HttpRequest request = HttpRequest.newBuilder()
+					.uri(URI.create(githubURL))
+					.timeout(Duration.ofSeconds(15))
+					.GET()
+					.build();
+			HttpResponse<String> response = hClient.send(request, HttpResponse.BodyHandlers.ofString());
 			// Convert to a JSON object to print data
 			JsonParser jp = new JsonParser(); //from gson
-			JsonElement root = jp.parse(new InputStreamReader((InputStream) request.getContent())); //Convert the input stream to a json element
+			JsonElement root = jp.parse(response.body()); //Convert response to a json element
+			//System.out.println(githubURL);
+			//System.out.println(root.toString()); // Debug connection info
 			JsonObject rootobj = root.getAsJsonObject();
 			JsonObject MultiLines = rootobj.get("MultiLines").getAsJsonObject(); // Main object
 			JsonArray MultiAreas = MultiLines.get("Areas").getAsJsonArray(); // Areas List
-			Multi_MULTI_AREAS = new ArrayList<Rectangle>(); // Clean existing Areas
+			List<Rectangle> tempArray = new ArrayList<Rectangle>(); // Clean existing Areas
 			for (JsonElement obj : MultiAreas){ // Map through each area to add tiles
-				JsonArray tiles = obj.getAsJsonObject().get("Tiles").getAsJsonArray();
-				for (JsonElement tile : tiles){ // Loop through each rectangle
-					JsonObject tileObject = tile.getAsJsonObject();
-					// Add each rectangle of tiles
-					Multi_MULTI_AREAS.add(
-							new Rectangle(
-									tileObject.get("x").getAsInt(),
-									tileObject.get("y").getAsInt(),
-									tileObject.get("width").getAsInt(),
-									tileObject.get("height").getAsInt()
-							)
-					);
+				//System.out.println("Area: " + obj.getAsJsonObject().get("Name").getAsString());
+				//System.out.println("" + obj.getAsJsonObject().get("Enabled").getAsBoolean());
+				//System.out.println("" + obj.getAsJsonObject().get("Disabled").getAsBoolean());
+				//System.out.println("" + obj.getAsJsonObject().get("Wilderness").getAsBoolean());
+				if (obj.getAsJsonObject().get("Enabled").getAsBoolean() && !obj.getAsJsonObject().get("Removed").getAsBoolean() && !obj.getAsJsonObject().get("Wilderness").getAsBoolean()) {
+					JsonArray tiles = obj.getAsJsonObject().get("Tiles").getAsJsonArray();
+					for (JsonElement tile : tiles) { // Loop through each rectangle
+						JsonObject tileObject = tile.getAsJsonObject();
+						// Add each rectangle of tiles
+						tempArray.add(
+								new Rectangle(
+										tileObject.get("x").getAsInt(),
+										tileObject.get("y").getAsInt(),
+										tileObject.get("width").getAsInt(),
+										tileObject.get("height").getAsInt()
+								)
+						);
+					}
 				}
 			}
+			arrayListToUpdate.clear();
+			arrayListToUpdate.addAll(tempArray);
 			UpdateSpearRanges(); // Once we're done, update Spear Ranges
 			//System.out.println("Multi Areas Updated");
 			clientThread.invokeLater(() -> {
 						client.addChatMessage(ChatMessageType.GAMEMESSAGE, "MultiLines", "Lastest Multi Lines Loaded from github", null);
 					});
 		}
-		catch (IOException e) {
+		catch (IOException | InterruptedException | IllegalStateException e) {
 			clientThread.invokeLater(() -> {
 						client.addChatMessage(ChatMessageType.GAMEMESSAGE, "MultiLines", "Error Loading Multi Lines from GitHub", null);
 					});
 
 			//System.out.println("Error Loading Multi Tiles from Github");;
 		}
-	}
+        return null;
+    }
 
 	public void UpdateSpearRanges()
 	{
