@@ -30,14 +30,13 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.inject.Provides;
-import net.runelite.api.ChatMessageType;
-import net.runelite.api.Client;
-import net.runelite.api.Constants;
-import net.runelite.api.Perspective;
+import net.runelite.api.*;
 import net.runelite.api.coords.LocalPoint;
+import net.runelite.api.events.GameStateChanged;
 import net.runelite.api.geometry.Geometry;
 import net.runelite.client.callback.ClientThread;
 import net.runelite.client.config.ConfigManager;
+import net.runelite.client.eventbus.Subscribe;
 import net.runelite.client.plugins.Plugin;
 import net.runelite.client.plugins.PluginDescriptor;
 import net.runelite.client.ui.overlay.OverlayManager;
@@ -62,15 +61,14 @@ import java.util.concurrent.ScheduledExecutorService;
 	description = "Show Multi mullti-combat areas and the dragon spear range to those areas outside the wilderness",
 	tags = {"dragon spear", "multicombat", "multi-combat", "multi", "dmm"}
 )
-public class MultiLinesPlugin extends Plugin
-{
+public class MultiLinesPlugin extends Plugin {
 	private List<Rectangle> Multi_MULTI_AREAS = new CopyOnWriteArrayList<Rectangle>();
 	private static final int SPEAR_RANGE = 4;
 
 	private Area MULTI_AREA = new Area();
 	private Area SPEAR_MULTI_AREA = new Area();
-
-
+	GeneralPath drawPathsNormal = new GeneralPath();
+	GeneralPath drawPathsSpear = new GeneralPath();
 
 	@Inject
 	private MultiLinesOverlay overlay;
@@ -91,28 +89,38 @@ public class MultiLinesPlugin extends Plugin
 	private MultiLinesConfig config;
 
 	@Provides
-	MultiLinesConfig getConfig(ConfigManager configManager)
-	{
+	MultiLinesConfig getConfig(ConfigManager configManager) {
 		return configManager.getConfig(MultiLinesConfig.class);
 	}
 
+	@Subscribe
+	public void onGameStateChanged(GameStateChanged gameStateChanged) {
+		if (gameStateChanged.getGameState() == GameState.LOGGED_IN) // Each time map is updated
+		{
+			executor.execute(() ->
+					updateLinesToDisplayNormal(MULTI_AREA)
+			);
+			executor.execute(() ->
+					updateLinesToDisplaySpear(SPEAR_MULTI_AREA)
+			);
+		}
+	}
+
 	@Override
-	public void startUp()
-	{
+	public void startUp() {
 		overlayManager.add(overlay);
 		config.setWarning("Warning, this plugin does not include Wilderness Multi Areas. Please use Wilderness Lines for that.");
 		executor.execute(() ->
-						UpdateMultiLines(Multi_MULTI_AREAS)
-				);
+				UpdateMultiLines(Multi_MULTI_AREAS)
+		);
 	}
 
 	@Override
-	public void shutDown()
-	{
+	public void shutDown() {
 		overlayManager.remove(overlay);
 	}
 
-	public Runnable UpdateMultiLines(List<Rectangle> arrayListToUpdate){
+	public Runnable UpdateMultiLines(List<Rectangle> arrayListToUpdate) {
 		// Lookup lastest data
 		String githubURL = "https://raw.githubusercontent.com/tsbreuer/Multi-Lines/master/src/main/java/com/tsbreuer/multilines/MultiLinesData.json?_=" + System.currentTimeMillis();
 
@@ -138,7 +146,7 @@ public class MultiLinesPlugin extends Plugin
 			JsonObject MultiLines = rootobj.get("MultiLines").getAsJsonObject(); // Main object
 			JsonArray MultiAreas = MultiLines.get("Areas").getAsJsonArray(); // Areas List
 			List<Rectangle> tempArray = new ArrayList<Rectangle>(); // Clean existing Areas
-			for (JsonElement obj : MultiAreas){ // Map through each area to add tiles
+			for (JsonElement obj : MultiAreas) { // Map through each area to add tiles
 				//System.out.println("Area: " + obj.getAsJsonObject().get("Name").getAsString());
 				//System.out.println("" + obj.getAsJsonObject().get("Enabled").getAsBoolean());
 				//System.out.println("" + obj.getAsJsonObject().get("Disabled").getAsBoolean());
@@ -164,28 +172,24 @@ public class MultiLinesPlugin extends Plugin
 			UpdateSpearRanges(); // Once we're done, update Spear Ranges
 			//System.out.println("Multi Areas Updated");
 			clientThread.invokeLater(() -> {
-						client.addChatMessage(ChatMessageType.GAMEMESSAGE, "MultiLines", "Lastest Multi Lines Loaded from github", null);
-					});
-		}
-		catch (IOException | InterruptedException | IllegalStateException e) {
+				client.addChatMessage(ChatMessageType.GAMEMESSAGE, "MultiLines", "Lastest Multi Lines Loaded from github", null);
+			});
+		} catch (IOException | InterruptedException | IllegalStateException e) {
 			clientThread.invokeLater(() -> {
-						client.addChatMessage(ChatMessageType.GAMEMESSAGE, "MultiLines", "Error Loading Multi Lines from GitHub", null);
-					});
+				client.addChatMessage(ChatMessageType.GAMEMESSAGE, "MultiLines", "Error Loading Multi Lines from GitHub", null);
+			});
 
 			//System.out.println("Error Loading Multi Tiles from Github");;
 		}
-        return null;
-    }
+		return null;
+	}
 
-	public void UpdateSpearRanges()
-	{
+	public void UpdateSpearRanges() {
 		SPEAR_MULTI_AREA = new Area();
 		MULTI_AREA = new Area();
-		for (final Rectangle multiArea : Multi_MULTI_AREAS)
-		{
+		for (final Rectangle multiArea : Multi_MULTI_AREAS) {
 			MULTI_AREA.add(new Area(multiArea));
-			for (int i = 0; i <= SPEAR_RANGE; i++)
-			{
+			for (int i = 0; i <= SPEAR_RANGE; i++) {
 				final Rectangle spearArea = new Rectangle(multiArea);
 				spearArea.grow(SPEAR_RANGE - i, i);
 				SPEAR_MULTI_AREA.add(new Area(spearArea));
@@ -193,28 +197,45 @@ public class MultiLinesPlugin extends Plugin
 		}
 	}
 
-	private void transformWorldToLocal(float[] coords)
-	{
-		final LocalPoint lp = LocalPoint.fromWorld(client, (int)coords[0], (int)coords[1]);
+	private void transformWorldToLocal(float[] coords) {
+		final LocalPoint lp = LocalPoint.fromWorld(client, (int) coords[0], (int) coords[1]);
 		coords[0] = lp.getX() - Perspective.LOCAL_TILE_SIZE / 2f;
 		coords[1] = lp.getY() - Perspective.LOCAL_TILE_SIZE / 2f;
 	}
 
-	GeneralPath getMultiLinesToDisplay()
-	{
-		return getLinesToDisplay(MULTI_AREA);
+	GeneralPath getMultiLinesToDisplay() {
+		return drawPathsNormal;
 	}
 
-	GeneralPath getSpearLinesToDisplay()
-	{
-		return getLinesToDisplay(SPEAR_MULTI_AREA);
+	GeneralPath getSpearLinesToDisplay() {
+		return drawPathsSpear;
 	}
 
-	private GeneralPath getLinesToDisplay(final Shape... shapes)
+
+	private void updateLinesToDisplayNormal(final Shape... shapes) {
+		final Rectangle sceneRect = new Rectangle(
+				client.getBaseX() + 1, client.getBaseY() + 1,
+				Constants.SCENE_SIZE - 2, Constants.SCENE_SIZE - 2);
+
+
+		final GeneralPath paths = new GeneralPath();
+		for (final Shape shape : shapes) {
+			GeneralPath lines = new GeneralPath(shape);
+			lines = Geometry.clipPath(lines, sceneRect);
+			lines = Geometry.splitIntoSegments(lines, 1);
+			lines = Geometry.transformPath(lines, this::transformWorldToLocal);
+			paths.append(lines, false);
+		}
+		System.out.println("Updated Normal Paths");
+		drawPathsNormal = paths;
+	}
+
+	private void updateLinesToDisplaySpear(final Shape... shapes)
 	{
 		final Rectangle sceneRect = new Rectangle(
-			client.getBaseX() + 1, client.getBaseY() + 1,
-			Constants.SCENE_SIZE - 2, Constants.SCENE_SIZE - 2);
+				client.getBaseX() + 1, client.getBaseY() + 1,
+				Constants.SCENE_SIZE - 2, Constants.SCENE_SIZE - 2);
+
 
 		final GeneralPath paths = new GeneralPath();
 		for (final Shape shape : shapes)
@@ -225,6 +246,7 @@ public class MultiLinesPlugin extends Plugin
 			lines = Geometry.transformPath(lines, this::transformWorldToLocal);
 			paths.append(lines, false);
 		}
-		return paths;
+		System.out.println("Updated Spear Paths");
+		drawPathsSpear = paths;
 	}
 }
