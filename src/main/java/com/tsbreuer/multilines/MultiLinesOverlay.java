@@ -206,7 +206,8 @@ class MultiLinesOverlay extends Overlay
 				(p2[0] > 0 && p2[0] < client.getCanvasWidth()) && (p2[1] > 0 && p2[1] < client.getCanvasHeight())
 
 		);
-		int count = getPathLength(path.getPathIterator((new AffineTransform())));
+		//int count = getPathLength(path.getPathIterator((new AffineTransform())));
+		// Reduce number of lines to draw
 		path = simplifyPath(path.getPathIterator((new AffineTransform())));
 		//System.out.println("Saved: " + (count - getPathLength(path.getPathIterator((new AffineTransform())))) + " out of " + count);
 
