@@ -124,7 +124,7 @@ public class MultiLinesPlugin extends Plugin {
 
 	public Runnable UpdateMultiLines(List<Rectangle> arrayListToUpdate) {
 		// Lookup lastest data
-		String githubURL = "https://raw.githubusercontent.com/tsbreuer/Multi-Lines/master/src/main/java/com/tsbreuer/multilines/MultiLinesData.json?_=" + System.currentTimeMillis();
+		String githubURL = "https://raw.githubusercontent.com/tsbreuer/Multi-Lines/geoJSON/src/main/java/com/tsbreuer/multilines/MultiLinesData.json?_=" + System.currentTimeMillis();
 
 		try {
 			HttpClient hClient = HttpClient.newBuilder()
