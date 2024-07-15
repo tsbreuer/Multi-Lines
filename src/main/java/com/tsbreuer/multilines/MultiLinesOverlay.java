@@ -31,17 +31,23 @@ import net.runelite.api.Perspective;
 import net.runelite.api.Point;
 import net.runelite.api.coords.LocalPoint;
 import net.runelite.api.geometry.Geometry;
+import net.runelite.client.plugins.PluginDescriptor;
 import net.runelite.client.ui.overlay.Overlay;
 import net.runelite.client.ui.overlay.OverlayLayer;
 import net.runelite.client.ui.overlay.OverlayPosition;
 
 import javax.inject.Inject;
+import lombok.extern.slf4j.Slf4j;
 import java.awt.*;
 import java.awt.geom.AffineTransform;
 import java.awt.geom.GeneralPath;
 import java.awt.geom.Line2D;
 import java.awt.geom.PathIterator;
 
+@Slf4j
+@PluginDescriptor(
+		name = "Multi Lines"
+)
 class MultiLinesOverlay extends Overlay
 {
 	private final MultiLinesPlugin plugin;
@@ -77,9 +83,9 @@ class MultiLinesOverlay extends Overlay
 	}
 
 	public boolean areParallel(double slope1, double slope2, double marginOfError){
-		if (Math.abs(slope1 - slope2) < marginOfError) {
-			//System.out.println(slope1 + " " + slope2 + " " + marginOfError + " " + Math.abs(slope1 - slope2) * 100);
-		}
+		//if (Math.abs(slope1 - slope2) < marginOfError) {
+			//log.debug(slope1 + " " + slope2 + " " + marginOfError + " " + Math.abs(slope1 - slope2) * 100);
+		//}
 		return Math.abs(slope1 - slope2) < marginOfError;
 	}
 
@@ -90,16 +96,16 @@ class MultiLinesOverlay extends Overlay
 		float[] startCoords = new float[2];
 		float[] currentCoords = new float[2];
 		Line2D prevLine = null;
-		//System.out.println("Start of simplifyPath");
+		//log.debug("Start of simplifyPath");
 		int iterations = 0;
 		int lastOperation = 0;
 		boolean	parallel = false;
 		while (!it.isDone())
 		{
 			iterations++;
-			//System.out.println(iterations);
+			//log.debug(iterations);
 			int type = it.currentSegment(coords);
-			//System.out.println("Type " + type);
+			//log.debug("Type " + type);
 			if (type == PathIterator.SEG_MOVETO)
 			{
 				if (prevLine != null){
@@ -107,7 +113,7 @@ class MultiLinesOverlay extends Overlay
 				}
 				startCoords[0] = coords[0];
 				startCoords[1] = coords[1];
-				//System.out.println("Moved to " + startCoords[0] + " " + startCoords[1]);
+				//log.debug("Moved to " + startCoords[0] + " " + startCoords[1]);
 				newPath.moveTo(coords[0], coords[1]);
 				prevLine = null;
 			}
@@ -120,16 +126,16 @@ class MultiLinesOverlay extends Overlay
 						currentCoords[0] = coords[0];
 						currentCoords[1] = coords[1];
 						parallel = true;
-						//System.out.println("Parallel to " + currentCoords[0] + " " + currentCoords[1]);
+						//log.debug("Parallel to " + currentCoords[0] + " " + currentCoords[1]);
 					}
 					else
 					{
-						//System.out.println("line " + prevLine);
-						//System.out.println("NewLineEnd: " + coords[0] + " " + coords[1]);
+						//log.debug("line " + prevLine);
+						//log.debug("NewLineEnd: " + coords[0] + " " + coords[1]);
 						// No longer parallel so draw line up to current point
 						newPath.lineTo(currentCoords[0], currentCoords[1]);
 						parallel = false;
-						//System.out.println("Drawed line "+ startCoords[0] + " " +  startCoords[1] + " " +  currentCoords[0] + " " + currentCoords[1]);
+						//log.debug("Drawed line "+ startCoords[0] + " " +  startCoords[1] + " " +  currentCoords[0] + " " + currentCoords[1]);
 						// Move start coordination to last point we drew to
 						startCoords[0] = currentCoords[0];
 						startCoords[1] = currentCoords[1];
@@ -144,28 +150,28 @@ class MultiLinesOverlay extends Overlay
 					prevLine = new Line2D.Float(startCoords[0], startCoords[1], coords[0], coords[1]);
 					currentCoords[0] = coords[0];
 					currentCoords[1] = coords[1];
-					//System.out.println("First Line, moved to " + currentCoords[0] + " " + currentCoords[1]);
+					//log.debug("First Line, moved to " + currentCoords[0] + " " + currentCoords[1]);
 				}
 			}
 			else if (type == PathIterator.SEG_CLOSE)
 			{
 				if (prevLine != null) {
-					//System.out.println(" Current coords " + currentCoords[0] + " " + currentCoords[1] + " new Coords: " + coords[0] + " " + coords[1]);
+					//log.debug(" Current coords " + currentCoords[0] + " " + currentCoords[1] + " new Coords: " + coords[0] + " " + coords[1]);
 					newPath.lineTo(coords[0], coords[1]);
 				}
 				else
 				{
-					System.out.println("Error! Not sure how we got here");
+					log.debug("Error! Not sure how we got here");
 				}
 				newPath.closePath();
 			}
 			it.next();
 			if (it.isDone()){
-					//System.out.println("End of iteration");
+					//log.debug("End of iteration");
 					newPath.lineTo(coords[0], coords[1]);
 			}
 		}
-		//System.out.println(iterations);
+		//log.debug(iterations);
 
 		return newPath;
 	}
@@ -209,7 +215,7 @@ class MultiLinesOverlay extends Overlay
 		//int count = getPathLength(path.getPathIterator((new AffineTransform())));
 		// Reduce number of lines to draw
 		path = simplifyPath(path.getPathIterator((new AffineTransform())));
-		//System.out.println("Saved: " + (count - getPathLength(path.getPathIterator((new AffineTransform())))) + " out of " + count);
+		//log.debug("Saved: " + (count - getPathLength(path.getPathIterator((new AffineTransform())))) + " out of " + count);
 
 		graphics.draw(path);
 	}

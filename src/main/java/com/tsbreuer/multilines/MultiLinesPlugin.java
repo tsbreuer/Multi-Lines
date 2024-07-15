@@ -30,6 +30,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.inject.Provides;
+import lombok.extern.slf4j.Slf4j;
 import net.runelite.api.*;
 import net.runelite.api.coords.LocalPoint;
 import net.runelite.api.events.GameStateChanged;
@@ -56,6 +57,7 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledExecutorService;
 
+@Slf4j
 @PluginDescriptor(
 	name = "Multi Lines",
 	description = "Show Multi mullti-combat areas and the dragon spear range to those areas outside the wilderness",
@@ -140,17 +142,17 @@ public class MultiLinesPlugin extends Plugin {
 			// Convert to a JSON object to print data
 			JsonParser jp = new JsonParser(); //from gson
 			JsonElement root = jp.parse(response.body()); //Convert response to a json element
-			//System.out.println(githubURL);
-			//System.out.println(root.toString()); // Debug connection info
+			//log.debug(githubURL);
+			//log.debug(root.toString()); // Debug connection info
 			JsonObject rootobj = root.getAsJsonObject();
 			JsonObject MultiLines = rootobj.get("MultiLines").getAsJsonObject(); // Main object
 			JsonArray MultiAreas = MultiLines.get("Areas").getAsJsonArray(); // Areas List
 			List<Rectangle> tempArray = new ArrayList<Rectangle>(); // Clean existing Areas
 			for (JsonElement obj : MultiAreas) { // Map through each area to add tiles
-				//System.out.println("Area: " + obj.getAsJsonObject().get("Name").getAsString());
-				//System.out.println("" + obj.getAsJsonObject().get("Enabled").getAsBoolean());
-				//System.out.println("" + obj.getAsJsonObject().get("Disabled").getAsBoolean());
-				//System.out.println("" + obj.getAsJsonObject().get("Wilderness").getAsBoolean());
+				//log.debug("Area: " + obj.getAsJsonObject().get("Name").getAsString());
+				//log.debug("" + obj.getAsJsonObject().get("Enabled").getAsBoolean());
+				//log.debug("" + obj.getAsJsonObject().get("Disabled").getAsBoolean());
+				//log.debug("" + obj.getAsJsonObject().get("Wilderness").getAsBoolean());
 				if (obj.getAsJsonObject().get("Enabled").getAsBoolean() && !obj.getAsJsonObject().get("Removed").getAsBoolean() && !obj.getAsJsonObject().get("Wilderness").getAsBoolean()) {
 					JsonArray tiles = obj.getAsJsonObject().get("Tiles").getAsJsonArray();
 					for (JsonElement tile : tiles) { // Loop through each rectangle
@@ -170,7 +172,7 @@ public class MultiLinesPlugin extends Plugin {
 			arrayListToUpdate.clear();
 			arrayListToUpdate.addAll(tempArray);
 			UpdateSpearRanges(); // Once we're done, update Spear Ranges
-			//System.out.println("Multi Areas Updated");
+			//log.debug("Multi Areas Updated");
 			clientThread.invokeLater(() -> {
 				client.addChatMessage(ChatMessageType.GAMEMESSAGE, "MultiLines", "Lastest Multi Lines Loaded from github", null);
 			});
@@ -179,7 +181,7 @@ public class MultiLinesPlugin extends Plugin {
 				client.addChatMessage(ChatMessageType.GAMEMESSAGE, "MultiLines", "Error Loading Multi Lines from GitHub", null);
 			});
 
-			//System.out.println("Error Loading Multi Tiles from Github");;
+			//log.debug("Error Loading Multi Tiles from Github");;
 		}
 		return null;
 	}
@@ -226,7 +228,7 @@ public class MultiLinesPlugin extends Plugin {
 			lines = Geometry.transformPath(lines, this::transformWorldToLocal);
 			paths.append(lines, false);
 		}
-		System.out.println("Updated Normal Paths");
+		//log.debug("Updated Normal Paths");
 		drawPathsNormal = paths;
 	}
 
@@ -246,7 +248,7 @@ public class MultiLinesPlugin extends Plugin {
 			lines = Geometry.transformPath(lines, this::transformWorldToLocal);
 			paths.append(lines, false);
 		}
-		System.out.println("Updated Spear Paths");
+		//log.debug("Updated Spear Paths");
 		drawPathsSpear = paths;
 	}
 }
