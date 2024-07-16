@@ -173,13 +173,21 @@ public class MultiLinesPlugin extends Plugin {
 			arrayListToUpdate.addAll(tempArray);
 			UpdateSpearRanges(); // Once we're done, update Spear Ranges
 			//log.debug("Multi Areas Updated");
-			clientThread.invokeLater(() -> {
-				client.addChatMessage(ChatMessageType.GAMEMESSAGE, "MultiLines", "Lastest Multi Lines Loaded from github", null);
-			});
+			if (client.getGameState() == GameState.LOGGED_IN)
+			{
+				clientThread.invokeLater(() -> {
+					client.addChatMessage(ChatMessageType.GAMEMESSAGE, "", "Lastest Multi Lines Loaded from github", null);
+				});
+			}
 		} catch (IOException | InterruptedException | IllegalStateException e) {
-			clientThread.invokeLater(() -> {
-				client.addChatMessage(ChatMessageType.GAMEMESSAGE, "MultiLines", "Error Loading Multi Lines from GitHub", null);
-			});
+			if (client.getGameState() == GameState.LOGGED_IN)
+			{
+				clientThread.invokeLater(() -> {
+					log.info("Error fetching data: {}", e.getMessage());
+
+					client.addChatMessage(ChatMessageType.GAMEMESSAGE, "", "Error Loading Multi Lines from GitHub", null);
+				});
+			}
 
 			//log.debug("Error Loading Multi Tiles from Github");;
 		}
