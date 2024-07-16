@@ -112,9 +112,13 @@ public class MultiLinesPlugin extends Plugin {
 	public void startUp() {
 		overlayManager.add(overlay);
 		config.setWarning("Warning, this plugin does not include Wilderness Multi Areas. Please use Wilderness Lines for that.");
-		executor.execute(() ->
-				UpdateMultiLines(Multi_MULTI_AREAS)
-		);
+		executor.execute(() -> UpdateMultiLines(Multi_MULTI_AREAS));
+
+		if (client.getGameState() == GameState.LOGGED_IN)
+		{
+			executor.execute(() -> updateLinesToDisplayNormal(MULTI_AREA));
+			executor.execute(() -> updateLinesToDisplaySpear(SPEAR_MULTI_AREA));
+		}
 	}
 
 	@Override
