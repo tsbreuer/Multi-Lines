@@ -164,6 +164,31 @@
         ]
       },
       {
+        "Name": "Desert Bandit Camp",
+        "Removed": false,
+        "Enabled": true,
+        "Wilderness": false,
+        "Notes": " - ",
+        "Tiles": [
+          { "x": 3137, "y": 2953, "width": 35, "height": 55 },
+          { "x": 3172, "y": 2953, "width": 3, "height": 54 },
+          { "x": 3175, "y": 2953, "width": 3, "height": 53 },
+          { "x": 3178, "y": 2953, "width": 3, "height": 52 },
+          { "x": 3181, "y": 2953, "width": 7, "height": 51 },
+          { "x": 3188, "y": 2954, "width": 1, "height": 50 },
+          { "x": 3189, "y": 2956, "width": 1, "height": 48 },
+          { "x": 3190, "y": 2958, "width": 1, "height": 46 },
+          { "x": 3191, "y": 2960, "width": 1, "height": 42 },
+          { "x": 3192, "y": 2962, "width": 1, "height": 38 },
+          { "x": 3193, "y": 2964, "width": 1, "height": 35 },
+          { "x": 3194, "y": 2966, "width": 1, "height": 31 },
+          { "x": 3195, "y": 2968, "width": 1, "height": 12 },
+          { "x": 3196, "y": 2970, "width": 1, "height": 9 },
+          { "x": 3197, "y": 2972, "width": 1, "height": 4 },
+          { "x": 3198, "y": 2974, "width": 1, "height": 1 }
+        ]
+      },
+      {
         "Name": "Mort Myre swamp",
         "Removed": false,
         "Enabled": true,
