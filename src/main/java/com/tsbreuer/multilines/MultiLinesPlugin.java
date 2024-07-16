@@ -176,7 +176,7 @@ public class MultiLinesPlugin extends Plugin {
 			if (client.getGameState() == GameState.LOGGED_IN)
 			{
 				clientThread.invokeLater(() -> {
-					client.addChatMessage(ChatMessageType.GAMEMESSAGE, "", "Lastest Multi Lines Loaded from github", null);
+					client.addChatMessage(ChatMessageType.GAMEMESSAGE, "", "Latest Multi Lines Loaded from github", null);
 				});
 			}
 		} catch (IOException | InterruptedException | IllegalStateException e) {
