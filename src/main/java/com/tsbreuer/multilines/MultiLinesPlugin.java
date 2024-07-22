@@ -67,7 +67,7 @@ import java.util.concurrent.ScheduledExecutorService;
 public class MultiLinesPlugin extends Plugin {
 	private List<Rectangle> Multi_MULTI_AREAS = new CopyOnWriteArrayList<Rectangle>();
 	private static final int SPEAR_RANGE = 4;
-	private int LoadedAreas = 1;
+	private int LoadedAreas = 0;
 
 	private Area MULTI_AREA = new Area();
 	private Area SPEAR_MULTI_AREA = new Area();
