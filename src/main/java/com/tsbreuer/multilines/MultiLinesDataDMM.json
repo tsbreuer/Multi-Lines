@@ -1742,6 +1742,23 @@
         "Tiles": [
           { "x": 3175, "y": 3647, "width": 1, "height": 1 }
         ]
+      },
+      {
+        "Name": "Outside Barbarian Village",
+        "Removed": false,
+        "Enabled": false,
+        "Wilderness": false,
+        "Notes": "Right outside barb village",
+        "Tiles": [
+          {"x": 3056, "y": 3408, "width": 1, "height": 30},
+          {"x": 3057, "y": 3409, "width": 2, "height": 31},
+          {"x": 3064, "y": 3415, "width": 8, "height": 33},
+          {"x": 3059, "y": 3414, "width": 5, "height": 26},
+          {"x": 3059, "y": 3413, "width": 4, "height": 1},
+          {"x": 3059, "y": 3412, "width": 3, "height": 1},
+          {"x": 3059, "y": 3411, "width": 2, "height": 1},
+          {"x": 3059, "y": 3410, "width": 1, "height": 1}
+        ]
       }
     ]
   }
