@@ -52,10 +52,22 @@ public interface MultiLinesConfig extends Config
 	)
 	void setWarning(String key);
 
+	@ConfigItem(
+			position = 1,
+			keyName = "showLoginMessage",
+			name = "Show Login Message on chat",
+			description = "Enable or disable the message in chat when loggin in or hopping",
+			section = multiLines
+	)
+	default boolean showLoginMessage()
+	{
+		return true;
+	}
+
 	@ConfigSection(
 		name = "Multi Lines",
 		description = "",
-		position = 1
+		position = 2
 	)
 	String multiLines = "multiLines";
 

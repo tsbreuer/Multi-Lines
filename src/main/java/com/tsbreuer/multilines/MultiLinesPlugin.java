@@ -53,6 +53,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.EnumSet;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledExecutorService;
@@ -66,6 +67,7 @@ import java.util.concurrent.ScheduledExecutorService;
 public class MultiLinesPlugin extends Plugin {
 	private List<Rectangle> Multi_MULTI_AREAS = new CopyOnWriteArrayList<Rectangle>();
 	private static final int SPEAR_RANGE = 4;
+	private int LoadedAreas = 1;
 
 	private Area MULTI_AREA = new Area();
 	private Area SPEAR_MULTI_AREA = new Area();
@@ -105,6 +107,17 @@ public class MultiLinesPlugin extends Plugin {
 			executor.execute(() ->
 					updateLinesToDisplaySpear(SPEAR_MULTI_AREA)
 			);
+			if (LoadedAreas == 0) {
+				executor.execute(() -> {
+							UpdateMultiLines(Multi_MULTI_AREAS, client.getWorldType());
+						}
+				);
+				LoadedAreas = 1;
+			}
+		} else if (gameStateChanged.getGameState() == GameState.LOGIN_SCREEN) {
+			LoadedAreas = 0;
+		} else if (gameStateChanged.getGameState() == GameState.HOPPING) {
+			LoadedAreas = 0;
 		}
 	}
 
@@ -112,13 +125,6 @@ public class MultiLinesPlugin extends Plugin {
 	public void startUp() {
 		overlayManager.add(overlay);
 		config.setWarning("Warning, this plugin does not include Wilderness Multi Areas. Please use Wilderness Lines for that.");
-		executor.execute(() -> UpdateMultiLines(Multi_MULTI_AREAS));
-
-		if (client.getGameState() == GameState.LOGGED_IN)
-		{
-			executor.execute(() -> updateLinesToDisplayNormal(MULTI_AREA));
-			executor.execute(() -> updateLinesToDisplaySpear(SPEAR_MULTI_AREA));
-		}
 	}
 
 	@Override
@@ -126,9 +132,16 @@ public class MultiLinesPlugin extends Plugin {
 		overlayManager.remove(overlay);
 	}
 
-	public Runnable UpdateMultiLines(List<Rectangle> arrayListToUpdate) {
+	public Runnable UpdateMultiLines(List<Rectangle> arrayListToUpdate, EnumSet<WorldType> worldType) {
 		// Lookup lastest data
-		String githubURL = "https://raw.githubusercontent.com/tsbreuer/Multi-Lines/geoJSON/src/main/java/com/tsbreuer/multilines/MultiLinesData.json?_=" + System.currentTimeMillis();
+		String githubURL;
+		if (worldType.contains(WorldType.DEADMAN)){
+			githubURL = "https://raw.githubusercontent.com/tsbreuer/Multi-Lines/geoJSON/src/main/java/com/tsbreuer/multilines/MultiLinesDataDMM.json?_=" + System.currentTimeMillis();
+		}
+		else {
+			githubURL = "https://raw.githubusercontent.com/tsbreuer/Multi-Lines/geoJSON/src/main/java/com/tsbreuer/multilines/MultiLinesData.json?_=" + System.currentTimeMillis();
+		}
+
 
 		try {
 			HttpClient hClient = HttpClient.newBuilder()
@@ -177,21 +190,21 @@ public class MultiLinesPlugin extends Plugin {
 			arrayListToUpdate.addAll(tempArray);
 			UpdateSpearRanges(); // Once we're done, update Spear Ranges
 			//log.debug("Multi Areas Updated");
-			if (client.getGameState() == GameState.LOGGED_IN)
-			{
+			if (config.showLoginMessage()){
 				clientThread.invokeLater(() -> {
-					client.addChatMessage(ChatMessageType.GAMEMESSAGE, "", "Latest Multi Lines Loaded from github", null);
+					if (worldType.contains(WorldType.DEADMAN)){
+						client.addChatMessage(ChatMessageType.GAMEMESSAGE, "MultiLines", "Multi Lines Loaded for DMM. If you see any areas incorrectly mapped, please let me know", null);
+						client.addChatMessage(ChatMessageType.GAMEMESSAGE, "MultiLines", "You can contact me on discord @hypex or make an issue on github. You can turn off this message on settings", null);
+					}
+					else {
+						client.addChatMessage(ChatMessageType.GAMEMESSAGE, "MultiLines", "Normal Multi Lines Loaded. You can turn off this message on settings.", null);
+					}
 				});
 			}
 		} catch (IOException | InterruptedException | IllegalStateException e) {
-			if (client.getGameState() == GameState.LOGGED_IN)
-			{
-				clientThread.invokeLater(() -> {
-					log.info("Error fetching data: {}", e.getMessage());
-
-					client.addChatMessage(ChatMessageType.GAMEMESSAGE, "", "Error Loading Multi Lines from GitHub", null);
-				});
-			}
+			clientThread.invokeLater(() -> {
+				client.addChatMessage(ChatMessageType.GAMEMESSAGE, "MultiLines", "Error Loading Multi Lines", null);
+			});
 
 			//log.debug("Error Loading Multi Tiles from Github");;
 		}
