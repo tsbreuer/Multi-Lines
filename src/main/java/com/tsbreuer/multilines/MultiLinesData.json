@@ -63,34 +63,14 @@
         ]
       },
       {
-        "Name": "Buthorpe",
+        "Name": "Buthorpe / White Wolf Mountain",
         "Removed": false,
         "Enabled": true,
         "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           { "x": 2880, "y": 3520, "width": 24, "height": 24 },
-        ]
-      },
-      {
-        "Name": "Catherby",
-        "Removed": false,
-        "Enabled": true,
-        "Wilderness": false,
-        "Notes": " - ",
-        "Tiles": [
-          {"x": 2816, "y": 3456, "width": 7, "height": 39},
-          {"x": 2823, "y": 3456, "width": 2, "height": 37},
-          {"x": 2825, "y": 3456, "width": 1, "height": 35},
-          {"x": 2826, "y": 3456, "width": 2, "height": 32},
-          {"x": 2828, "y": 3456, "width": 2, "height": 29},
-          {"x": 2830, "y": 3456, "width": 1, "height": 20},
-          {"x": 2831, "y": 3456, "width": 2, "height": 18},
-          {"x": 2833, "y": 3469, "width": 1, "height": 4},
-          {"x": 2833, "y": 3456, "width": 3, "height": 7},
-          {"x": 2836, "y": 3456, "width": 3, "height": 6},
-          {"x": 2839, "y": 3456, "width": 3, "height": 5},
-          {"x": 2842, "y": 3456, "width": 1, "height": 3}
+          { "x": 2816, "y": 3456, "width": 64, "height": 64 }
         ]
       },
       {

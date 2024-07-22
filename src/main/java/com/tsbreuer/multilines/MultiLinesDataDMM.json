@@ -63,16 +63,35 @@
         ]
       },
       {
-        "Name": "Buthorpe / White Wolf Mountain",
+        "Name": "Buthorpe",
         "Removed": false,
         "Enabled": true,
         "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           { "x": 2880, "y": 3520, "width": 24, "height": 24 },
-          { "x": 2816, "y": 3456, "width": 64, "height": 64 }
         ]
-
+      },
+      {
+        "Name": "Catherby",
+        "Removed": false,
+        "Enabled": true,
+        "Wilderness": false,
+        "Notes": " - ",
+        "Tiles": [
+          {"x": 2816, "y": 3456, "width": 7, "height": 39},
+          {"x": 2823, "y": 3456, "width": 2, "height": 37},
+          {"x": 2825, "y": 3456, "width": 1, "height": 35},
+          {"x": 2826, "y": 3456, "width": 2, "height": 32},
+          {"x": 2828, "y": 3456, "width": 2, "height": 29},
+          {"x": 2830, "y": 3456, "width": 1, "height": 20},
+          {"x": 2831, "y": 3456, "width": 2, "height": 18},
+          {"x": 2833, "y": 3469, "width": 1, "height": 4},
+          {"x": 2833, "y": 3456, "width": 3, "height": 7},
+          {"x": 2836, "y": 3456, "width": 3, "height": 6},
+          {"x": 2839, "y": 3456, "width": 3, "height": 5},
+          {"x": 2842, "y": 3456, "width": 1, "height": 3}
+        ]
       },
       {
         "Name": "Falador chaos altar",
@@ -103,6 +122,19 @@
           {"x":3032,"y":3299,"width":12,"height":13},
           {"x":3032,"y":3298,"width":11,"height":1},
           {"x":3038,"y":3297,"width":4,"height":1}
+        ]
+      },
+      {
+        "Name": "Barbarian village",
+        "Removed": false,
+        "Enabled": true,
+        "Wilderness": false,
+        "Notes": " - ",
+        "Tiles": [
+          {"x": 3072, "y": 3448, "width": 64, "height": 8},
+          {"x": 3056, "y": 3392, "width": 80, "height": 48},
+          {"x": 3064, "y": 3440, "width": 72, "height": 8},
+          {"x": 3048, "y": 3392, "width": 8, "height": 16}
         ]
       },
       {
@@ -148,6 +180,31 @@
         "Notes": " - ",
         "Tiles": [
           {"x": 3264, "y": 3136, "width": 64, "height": 64}
+        ]
+      },
+      {
+        "Name": "Desert Bandit Camp",
+        "Removed": false,
+        "Enabled": true,
+        "Wilderness": false,
+        "Notes": " - ",
+        "Tiles": [
+          { "x": 3137, "y": 2953, "width": 35, "height": 55 },
+          { "x": 3172, "y": 2953, "width": 3, "height": 54 },
+          { "x": 3175, "y": 2953, "width": 3, "height": 53 },
+          { "x": 3178, "y": 2953, "width": 3, "height": 52 },
+          { "x": 3181, "y": 2953, "width": 7, "height": 51 },
+          { "x": 3188, "y": 2954, "width": 1, "height": 50 },
+          { "x": 3189, "y": 2956, "width": 1, "height": 48 },
+          { "x": 3190, "y": 2958, "width": 1, "height": 46 },
+          { "x": 3191, "y": 2960, "width": 1, "height": 42 },
+          { "x": 3192, "y": 2962, "width": 1, "height": 38 },
+          { "x": 3193, "y": 2964, "width": 1, "height": 35 },
+          { "x": 3194, "y": 2966, "width": 1, "height": 31 },
+          { "x": 3195, "y": 2968, "width": 1, "height": 12 },
+          { "x": 3196, "y": 2970, "width": 1, "height": 9 },
+          { "x": 3197, "y": 2972, "width": 1, "height": 4 },
+          { "x": 3198, "y": 2974, "width": 1, "height": 1 }
         ]
       },
       {
@@ -439,7 +496,7 @@
         "Wilderness": false,
         "Notes": "There's no relevant tiles that benefit from multi warning but it may be unexpected - I think its disabled on dmm anyway",
         "Tiles": [
-            {"x": 2616, "y": 2557, "width": 80, "height": 67}
+          {"x": 2616, "y": 2557, "width": 80, "height": 67}
         ]
       },
       {
@@ -573,6 +630,16 @@
         ]
       },
       {
+        "Name": "Lunar Isle",
+        "Removed": false,
+        "Enabled": true,
+        "Wilderness": false,
+        "Notes": " - ",
+        "Tiles": [
+          {"x": 2056, "y": 3843, "width": 115, "height": 116}
+        ]
+      },
+      {
         "Name": "Zulrah Island",
         "Removed": false,
         "Enabled": true,
@@ -669,7 +736,8 @@
           {"x": 1751, "y": 3468, "width": 1, "height": 11},
           {"x": 1752, "y": 3468, "width": 1, "height": 10},
           {"x": 1753, "y": 3468, "width": 1, "height": 9},
-          {"x": 1754, "y": 3468, "width": 3, "height": 8},
+          {"x": 1754, "y": 3468, "width": 1, "height": 9},
+          {"x": 1755, "y": 3468, "width": 2, "height": 8},
           {"x": 1757, "y": 3468, "width": 1, "height": 7},
           {"x": 1758, "y": 3468, "width": 1, "height": 6},
           {"x": 1759, "y": 3468, "width": 20, "height": 5},
@@ -703,14 +771,15 @@
           {"x": 1848, "y": 3495, "width": 37, "height": 1},
           {"x": 1849, "y": 3496, "width": 36, "height": 5},
           {"x": 1848, "y": 3501, "width": 37, "height": 2},
-          {"x": 1847, "y": 3503, "width": 38, "height": 1},
-          {"x": 1846, "y": 3504, "width": 39, "height": 1},
-          {"x": 1845, "y": 3505, "width": 40, "height": 2},
-          {"x": 1844, "y": 3507, "width": 41, "height": 6},
+          {"x": 1848, "y": 3503, "width": 37, "height": 1},
+          {"x": 1847, "y": 3504, "width": 38, "height": 1},
+          {"x": 1846, "y": 3505, "width": 39, "height": 2},
+          {"x": 1845, "y": 3506, "width": 40, "height": 2},
+          {"x": 1844, "y": 3508, "width": 41, "height": 5},
           {"x": 1843, "y": 3513, "width": 42, "height": 2},
           {"x": 1842, "y": 3515, "width": 43, "height": 1},
           {"x": 1841, "y": 3516, "width": 44, "height": 1},
-          {"x": 1839, "y": 3517, "width": 46, "height": 1},
+          {"x": 1838, "y": 3517, "width": 47, "height": 1},
           {"x": 1837, "y": 3518, "width": 48, "height": 1},
           {"x": 1836, "y": 3519, "width": 49, "height": 2},
           {"x": 1835, "y": 3521, "width": 50, "height": 1},
@@ -755,13 +824,13 @@
         "Notes": " - ",
         "Tiles": [
           {"x": 1739, "y": 3503, "width": 11, "height": 1},
-          {"x": 1737, "y": 3486, "width": 14, "height": 17},
+          {"x": 1736, "y": 3486, "width": 15, "height": 17},
           {"x": 1751, "y": 3486, "width": 4, "height": 16},
           {"x": 1755, "y": 3487, "width": 2, "height": 14},
           {"x": 1757, "y": 3490, "width": 1, "height": 6},
           {"x": 1758, "y": 3491, "width": 1, "height": 5},
-          {"x": 1733, "y": 3487, "width": 4, "height": 13},
-          {"x": 1732, "y": 3487, "width": 1, "height": 12}
+          {"x": 1733, "y": 3489, "width": 4, "height": 11},
+          {"x": 1732, "y": 3491, "width": 1, "height": 7}
         ]
       },
       {
@@ -777,7 +846,7 @@
           { "x": 1768, "y": 3510, "width": 16, "height": 2 },
           { "x": 1773, "y": 3512, "width": 4, "height": 2 },
           { "x": 1777, "y": 3512, "width": 4, "height": 1 },
-          { "x": 1774, "y": 3499, "width": 10, "height": 1 }
+          { "x": 1774, "y": 3499, "width": 7, "height": 1 }
         ]
       },
       {
@@ -797,10 +866,10 @@
           { "x": 1753, "y": 3544, "width": 3, "height": 1 },
           { "x": 1755, "y": 3591, "width": 16, "height": 16 },
           { "x": 1737, "y": 3610, "width": 8, "height": 3 },
-          { "x": 1739, "y": 3613, "width": 6, "height": 10 },
-          { "x": 1737, "y": 3619, "width": 2, "height": 4 },
+          { "x": 1740, "y": 3613, "width": 5, "height": 10 },
+          { "x": 1737, "y": 3619, "width": 3, "height": 4 },
           { "x": 1745, "y": 3618, "width": 5, "height": 3 },
-          { "x": 1745, "y": 3612, "width": 1, "height": 6 },
+          { "x": 1745, "y": 3612, "width": 2, "height": 6 },
           { "x": 1746, "y": 3612, "width": 4, "height": 3 },
           { "x": 1746, "y": 3636, "width": 19, "height": 10 },
           { "x": 1765, "y": 3636, "width": 1, "height": 9 },
@@ -810,7 +879,9 @@
           { "x": 1745, "y": 3639, "width": 1, "height": 5 },
           { "x": 1744, "y": 3640, "width": 1, "height": 3 },
           { "x": 1750, "y": 3646, "width": 10, "height": 1 },
-          { "x": 1764, "y": 3635, "width": 2, "height": 1 }
+          { "x": 1764, "y": 3635, "width": 2, "height": 1 },
+          { "x": 1763, "y": 3619, "width": 6, "height": 5 },
+          { "x": 1769, "y": 3621, "width": 2, "height": 3 }
         ]
       },
       {
@@ -830,11 +901,21 @@
           { "x": 1747, "y": 3669, "width": 43, "height": 1 },
           { "x": 1747, "y": 3670, "width": 44, "height": 1 },
           { "x": 1747, "y": 3671, "width": 46, "height": 1 },
-          { "x": 1747, "y": 3672, "width": 107, "height": 93 },
+          { "x": 1747, "y": 3672, "width": 41, "height": 17 },
+          { "x": 1791, "y": 3672, "width": 4, "height": 7 },
+          { "x": 1788, "y": 3672, "width": 3, "height": 10 },
+          { "x": 1788, "y": 3682, "width": 2, "height": 6 },
+          { "x": 1741, "y": 3688, "width": 47, "height": 4 },
+          { "x": 1747, "y": 3692, "width": 43, "height": 7 },
+          { "x": 1747, "y": 3699, "width": 45, "height": 10 },
+          { "x": 1747, "y": 3709, "width": 49, "height": 3 },
+          { "x": 1805, "y": 3708, "width": 4, "height": 4 },
+          { "x": 1747, "y": 3712, "width": 107, "height": 53 },
           { "x": 1745, "y": 3679, "width": 2, "height": 30 },
           { "x": 1743, "y": 3682, "width": 2, "height": 24 },
           { "x": 1741, "y": 3684, "width": 2, "height": 19 },
-          { "x": 1739, "y": 3689, "width": 2, "height": 12 },
+          { "x": 1739, "y": 3688, "width": 48, "height": 12 },
+          { "x": 1739, "y": 3692, "width": 2, "height": 3 },
           { "x": 1740, "y": 3723, "width": 7, "height": 77 },
           { "x": 1743, "y": 3800, "width": 22, "height": 3 },
           { "x": 1752, "y": 3803, "width": 10, "height": 3 },
@@ -1462,9 +1543,10 @@
           {"x": 1742, "y": 2914, "width": 11, "height": 26},
           {"x": 1742, "y": 2940, "width": 6, "height": 2},
           {"x": 1753, "y": 2914, "width": 2, "height": 25},
-          {"x": 1755, "y": 2914, "width": 1, "height": 24},
-          {"x": 1756, "y": 2918, "width": 1, "height": 19},
-          {"x": 1757, "y": 2927, "width": 1, "height": 9},
+          {"x": 1755, "y": 2914, "width": 1, "height": 25},
+          {"x": 1756, "y": 2918, "width": 1, "height": 20},
+          {"x": 1757, "y": 2927, "width": 1, "height": 10},
+          {"x": 1758, "y": 2935, "width": 1, "height": 1},
           {"x": 1583, "y": 2883, "width": 80, "height": 61},
           {"x": 1583, "y": 2944, "width": 79, "height": 2},
           {"x": 1583, "y": 2946, "width": 78, "height": 1},
@@ -1741,23 +1823,6 @@
         "Notes": "One separate tile north of bridge east of ferox",
         "Tiles": [
           { "x": 3175, "y": 3647, "width": 1, "height": 1 }
-        ]
-      },
-      {
-        "Name": "Outside Barbarian Village",
-        "Removed": false,
-        "Enabled": true,
-        "Wilderness": false,
-        "Notes": "Right outside barb village",
-        "Tiles": [
-          {"x": 3056, "y": 3408, "width": 1, "height": 30},
-          {"x": 3057, "y": 3409, "width": 2, "height": 31},
-          {"x": 3064, "y": 3415, "width": 8, "height": 33},
-          {"x": 3059, "y": 3414, "width": 5, "height": 26},
-          {"x": 3059, "y": 3413, "width": 4, "height": 1},
-          {"x": 3059, "y": 3412, "width": 3, "height": 1},
-          {"x": 3059, "y": 3411, "width": 2, "height": 1},
-          {"x": 3059, "y": 3410, "width": 1, "height": 1}
         ]
       }
     ]
