@@ -73,6 +73,16 @@
         ]
       },
       {
+        "Name": "Nature Altar",
+        "Removed": false,
+        "Enabled": true,
+        "Wilderness": false,
+        "Notes": " - ",
+        "Tiles": [
+          { "x": 2416, "y": 4831, "width": 22, "height": 22 }
+        ]
+      },
+      {
         "Name": "Catherby",
         "Removed": false,
         "Enabled": true,
