@@ -131,10 +131,14 @@
         "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
-          {"x": 3072, "y": 3448, "width": 64, "height": 8},
-          {"x": 3056, "y": 3392, "width": 80, "height": 48},
-          {"x": 3064, "y": 3440, "width": 72, "height": 8},
-          {"x": 3048, "y": 3392, "width": 8, "height": 16}
+          {"x": 3056, "y": 3408, "width": 1, "height": 30},
+          {"x": 3057, "y": 3409, "width": 2, "height": 31},
+          {"x": 3064, "y": 3415, "width": 8, "height": 33},
+          {"x": 3059, "y": 3414, "width": 5, "height": 26},
+          {"x": 3059, "y": 3413, "width": 4, "height": 1},
+          {"x": 3059, "y": 3412, "width": 3, "height": 1},
+          {"x": 3059, "y": 3411, "width": 2, "height": 1},
+          {"x": 3059, "y": 3410, "width": 1, "height": 1}
         ]
       },
       {
