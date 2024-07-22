@@ -101,20 +101,22 @@ public class MultiLinesPlugin extends Plugin {
 	public void onGameStateChanged(GameStateChanged gameStateChanged) {
 		if (gameStateChanged.getGameState() == GameState.LOGGED_IN) // Each time map is updated
 		{
-			executor.execute(() ->
-					updateLinesToDisplayNormal(MULTI_AREA)
-			);
-			executor.execute(() ->
-					updateLinesToDisplaySpear(SPEAR_MULTI_AREA)
-			);
+			log.debug("LOGGED IN");
 			if (LoadedAreas == 0) {
+				log.debug("Requested Multi Lines Load");
 				executor.execute(() -> {
 							UpdateMultiLines(Multi_MULTI_AREAS, client.getWorldType());
 						}
 				);
 				LoadedAreas = 1;
 			}
-		} else if (gameStateChanged.getGameState() == GameState.LOGIN_SCREEN) {
+			executor.execute(() ->
+					updateLinesToDisplayNormal(MULTI_AREA)
+			);
+			executor.execute(() ->
+					updateLinesToDisplaySpear(SPEAR_MULTI_AREA)
+			);
+		} else if (gameStateChanged.getGameState() == GameState.LOGIN_SCREEN || gameStateChanged.getGameState() == GameState.LOGGING_IN) {
 			LoadedAreas = 0;
 		} else if (gameStateChanged.getGameState() == GameState.HOPPING) {
 			LoadedAreas = 0;
