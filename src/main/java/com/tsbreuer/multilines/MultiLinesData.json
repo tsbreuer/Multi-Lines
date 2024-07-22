@@ -63,14 +63,13 @@
         ]
       },
       {
-        "Name": "Buthorpe / White Wolf Mountain",
+        "Name": "Buthorpe",
         "Removed": false,
         "Enabled": true,
         "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
           { "x": 2880, "y": 3520, "width": 24, "height": 24 },
-          { "x": 2816, "y": 3456, "width": 64, "height": 64 }
         ]
 
       },
