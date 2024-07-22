@@ -1746,7 +1746,7 @@
       {
         "Name": "Outside Barbarian Village",
         "Removed": false,
-        "Enabled": false,
+        "Enabled": true,
         "Wilderness": false,
         "Notes": "Right outside barb village",
         "Tiles": [
