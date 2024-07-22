@@ -112,9 +112,13 @@ public class MultiLinesPlugin extends Plugin {
 	public void startUp() {
 		overlayManager.add(overlay);
 		config.setWarning("Warning, this plugin does not include Wilderness Multi Areas. Please use Wilderness Lines for that.");
-		executor.execute(() ->
-				UpdateMultiLines(Multi_MULTI_AREAS)
-		);
+		executor.execute(() -> UpdateMultiLines(Multi_MULTI_AREAS));
+
+		if (client.getGameState() == GameState.LOGGED_IN)
+		{
+			executor.execute(() -> updateLinesToDisplayNormal(MULTI_AREA));
+			executor.execute(() -> updateLinesToDisplaySpear(SPEAR_MULTI_AREA));
+		}
 	}
 
 	@Override
@@ -124,7 +128,7 @@ public class MultiLinesPlugin extends Plugin {
 
 	public Runnable UpdateMultiLines(List<Rectangle> arrayListToUpdate) {
 		// Lookup lastest data
-		String githubURL = "https://raw.githubusercontent.com/tsbreuer/Multi-Lines/master/src/main/java/com/tsbreuer/multilines/MultiLinesData.json?_=" + System.currentTimeMillis();
+		String githubURL = "https://raw.githubusercontent.com/tsbreuer/Multi-Lines/geoJSON/src/main/java/com/tsbreuer/multilines/MultiLinesData.json?_=" + System.currentTimeMillis();
 
 		try {
 			HttpClient hClient = HttpClient.newBuilder()
@@ -173,13 +177,21 @@ public class MultiLinesPlugin extends Plugin {
 			arrayListToUpdate.addAll(tempArray);
 			UpdateSpearRanges(); // Once we're done, update Spear Ranges
 			//log.debug("Multi Areas Updated");
-			clientThread.invokeLater(() -> {
-				client.addChatMessage(ChatMessageType.GAMEMESSAGE, "MultiLines", "Lastest Multi Lines Loaded from github", null);
-			});
+			if (client.getGameState() == GameState.LOGGED_IN)
+			{
+				clientThread.invokeLater(() -> {
+					client.addChatMessage(ChatMessageType.GAMEMESSAGE, "", "Latest Multi Lines Loaded from github", null);
+				});
+			}
 		} catch (IOException | InterruptedException | IllegalStateException e) {
-			clientThread.invokeLater(() -> {
-				client.addChatMessage(ChatMessageType.GAMEMESSAGE, "MultiLines", "Error Loading Multi Lines from GitHub", null);
-			});
+			if (client.getGameState() == GameState.LOGGED_IN)
+			{
+				clientThread.invokeLater(() -> {
+					log.info("Error fetching data: {}", e.getMessage());
+
+					client.addChatMessage(ChatMessageType.GAMEMESSAGE, "", "Error Loading Multi Lines from GitHub", null);
+				});
+			}
 
 			//log.debug("Error Loading Multi Tiles from Github");;
 		}

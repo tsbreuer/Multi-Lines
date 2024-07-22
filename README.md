@@ -8,3 +8,5 @@ This plugin is not meant to replace that plugin, this plugin is complementary an
 This plugin only provides non-wilderness multi lines.
 
 Currently only Varlamore and a few Kourend areas are missing. More are being mapped constantly.
+
+Lastest version of the Multi Lines is found on the geoJSON branch, so please use that for any developments.
