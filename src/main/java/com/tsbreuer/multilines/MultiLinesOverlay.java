@@ -121,7 +121,7 @@ class MultiLinesOverlay extends Overlay
 			{
 				if (prevLine != null) {
 					Line2D currentLine = new Line2D.Float(currentCoords[0], currentCoords[1], coords[0], coords[1]);
-					if (areParallel(getSlope(currentLine),getSlope(prevLine), 0.07)) {
+					if (areParallel(getSlope(currentLine),getSlope(prevLine), 0.1)) {
 						// We save coords of current pos and go next
 						currentCoords[0] = coords[0];
 						currentCoords[1] = coords[1];
