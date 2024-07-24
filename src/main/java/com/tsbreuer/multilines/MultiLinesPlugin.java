@@ -65,7 +65,7 @@ import java.util.concurrent.ScheduledExecutorService;
 	tags = {"dragon spear", "multicombat", "multi-combat", "multi", "dmm"}
 )
 public class MultiLinesPlugin extends Plugin {
-	private List<Rectangle> Multi_MULTI_AREAS = new CopyOnWriteArrayList<Rectangle>();
+	private List<Rectangle> Multi_MULTI_AREAS = new ArrayList<Rectangle>();
 	private static final int SPEAR_RANGE = 4;
 	private int LoadedAreas = 0;
 
