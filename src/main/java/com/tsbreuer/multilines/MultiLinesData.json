@@ -91,6 +91,16 @@
         ]
       },
       {
+        "Name": "ONE TILE IN MIDDLE OF SAVANNAH",
+        "Removed": false,
+        "Enabled": true,
+        "Wilderness": false,
+        "Notes": "What the fuck jagex",
+        "Tiles": [
+          {"x": 1649, "y": 2994, "width": 1, "height": 1}
+        ]
+      },
+      {
         "Name": "Falador chaos altar",
         "Removed": false,
         "Enabled": true,
