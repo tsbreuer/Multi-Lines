@@ -85,6 +85,16 @@
         ]
       },
       {
+        "Name": "Hammersprike hangout",
+        "Removed": false,
+        "Enabled": true,
+        "Wilderness": false,
+        "Notes": " - ",
+        "Tiles": [
+          {"x": 2962, "y": 9805, "width": 14, "height": 15}
+        ]
+      },
+      {
         "Name": "West of Chasm of Fire",
         "Removed": false,
         "Enabled": true,
