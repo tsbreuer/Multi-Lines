@@ -1850,7 +1850,17 @@
         "Wilderness": true,
         "Notes": " - ",
         "Tiles": [
-          { "x": 3136, "y": 3525, "width": 56, "height": 59 }
+          { "x": 3136, "y": 3523, "width": 56, "height": 61 }
+        ]
+      },
+	  {
+        "Name": "Line north of Grand Exchange",
+        "Removed": false,
+        "Enabled": true,
+        "Wilderness": false,
+        "Notes": " - ",
+        "Tiles": [
+          { "x": 3136, "y": 3520, "width": 56, "height": 1 }
         ]
       },
       {
