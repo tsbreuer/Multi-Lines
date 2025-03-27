@@ -1887,6 +1887,16 @@
           { "x": 3136, "y": 3525, "width": 56, "height": 59 }
         ]
       },
+       {
+        "Name": "Line north of Grand Exchange",
+        "Removed": false,
+        "Enabled": true,
+        "Wilderness": false,
+        "Notes": " - ",
+        "Tiles": [
+          { "x": 3136, "y": 3520, "width": 56, "height": 5 }
+        ]
+      },
       {
         "Name": "Ferox Enclave",
         "Removed": false,
