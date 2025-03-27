@@ -1850,7 +1850,7 @@
         "Wilderness": true,
         "Notes": " - ",
         "Tiles": [
-          { "x": 3136, "y": 3523, "width": 56, "height": 61 }
+          { "x": 3136, "y": 3525, "width": 56, "height": 59 }
         ]
       },
 	  {
@@ -1860,7 +1860,7 @@
         "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
-          { "x": 3136, "y": 3520, "width": 56, "height": 1 }
+          { "x": 3136, "y": 3520, "width": 56, "height": 5 }
         ]
       },
       {
