@@ -85,6 +85,22 @@
         ]
       },
       {
+        "Name": "Southwest Priff",
+        "Removed": false,
+        "Enabled": true,
+        "Wilderness": false,
+        "Notes": " - ",
+        "Tiles": [
+          {"x": 3233, "y": 6037, "width": 26, "height": 20},
+      	  {"x": 3259, "y": 6045, "width": 2, "height": 9},
+      	  {"x": 3238, "y": 6057, "width": 19, "height": 4},
+      	  {"x": 3237, "y": 6057, "width": 1, "height": 3},
+      	  {"x": 3236, "y": 6057, "width": 1, "height": 2},
+      	  {"x": 3235, "y": 6057, "width": 1, "height": 1},
+      	  {"x": 3243, "y": 6036, "width": 9, "height": 1}
+        ]
+      },
+      {
         "Name": "Hammersprike hangout",
         "Removed": false,
         "Enabled": true,
