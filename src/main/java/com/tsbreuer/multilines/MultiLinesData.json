@@ -1677,7 +1677,7 @@
         "Removed": false,
         "Enabled": true,
         "Wilderness": false,
-        "Notes": "WIP, will disable it overnight so someone doesnt get confused.",
+        "Notes": "This was hands up the worst area so far to map",
         "Tiles": [
           {"x": 1634, "y": 3213, "width": 16, "height": 29},
 	  {"x": 1633, "y": 3214, "width": 1, "height": 16},
