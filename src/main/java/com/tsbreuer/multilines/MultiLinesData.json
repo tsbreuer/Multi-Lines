@@ -1656,17 +1656,20 @@
         "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
-	  {"x": 1508, "y": 3272, "width": 22, "height": 15},
+	  {"x": 1508, "y": 3272, "width": 22, "height": 14},
 	  {"x": 1509, "y": 3270, "width": 18, "height": 2},
 	  {"x": 1511, "y": 3269, "width": 9, "height": 1},
 	  {"x": 1514, "y": 3268, "width": 4, "height": 1},
-	  {"x": 1530, "y": 3274, "width": 1, "height": 10},
+	  {"x": 1530, "y": 3274, "width": 1, "height": 11},
 	  {"x": 1531, "y": 3278, "width": 1, "height": 7},
 	  {"x": 1532, "y": 3280, "width": 1, "height": 5},
 	  {"x": 1533, "y": 3282, "width": 2, "height": 3},
 	  {"x": 1503, "y": 3286, "width": 17, "height": 3},
 	  {"x": 1505, "y": 3289, "width": 14, "height": 2},
-	  {"x": 1508, "y": 3291, "width": 8, "height": 2}
+	  {"x": 1508, "y": 3291, "width": 8, "height": 2},
+	  {"x": 1507, "y": 3275, "width": 1, "height": 11},
+	  {"x": 1504, "y": 3276, "width": 3, "height": 10},
+	  {"x": 1503, "y": 3278, "width": 1, "height": 8}
         ]
       },
 	{
