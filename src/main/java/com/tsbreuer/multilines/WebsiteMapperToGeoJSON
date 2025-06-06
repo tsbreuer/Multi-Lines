@@ -1,0 +1,16 @@
+%dw 2.0
+output application/json
+---
+payload map ((value, index) -> 
+    if ((value.x1 <= value.x2) and (value.y1 <= value.y2))
+    {x: value.x1, y: value.y1, width:(value.x2 - value.x1) + 1, height: (value.y2 - value.y1)+1}
+
+    else if ((value.x1 >= value.x2) and (value.y1 <= value.y2))
+    {x: value.x2, y: value.y1, width:(value.x1 - value.x2) + 1, height: (value.y2 - value.y1)+1}
+
+    else if ((value.x1 >= value.x2) and (value.y1 >= value.y2))
+    {x: value.x2, y: value.y2, width:(value.x1 - value.x2) + 1, height: (value.y1 - value.y2)+1}
+
+    else // ((value.x1 <= value.x2) and (value.y1 >= value.y2))
+    {x: value.x1, y: value.y2, width:(value.x2 - value.x1) + 1, height: (value.y1 - value.y2)+1}
+)
