@@ -1650,6 +1650,19 @@
         ]
       },
       {
+        "Name": "Darkfrost (Hueycoatl)",
+        "Removed": false,
+        "Enabled": true,
+        "Wilderness": false,
+        "Notes": " - ",
+        "Tiles": [
+          {"x": 1508, "y": 3272, "width": 23, "height": 2},
+	  {"x": 1509, "y": 3270, "width": 19, "height": 2},
+	  {"x": 1511, "y": 3269, "width": 9, "height": 1},
+	  {"x": 1514, "y": 3268, "width": 4, "height": 1}
+        ]
+      },
+	{
         "Name": "The teomat",
         "Removed": false,
         "Enabled": true,
