@@ -1675,7 +1675,7 @@
 	{
         "Name": "Twilight temple / Tower of ascension (Varlamore)",
         "Removed": false,
-        "Enabled": false,
+        "Enabled": true,
         "Wilderness": false,
         "Notes": "WIP, will disable it overnight so someone doesnt get confused.",
         "Tiles": [
