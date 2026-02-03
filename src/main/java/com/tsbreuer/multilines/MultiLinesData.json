@@ -42,7 +42,11 @@
         "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
-          { "x": 2560, "y": 3008, "width": 62, "height": 64 }
+          { "x": 2880, "y": 3742, "width": 32, "height": 22 },
+          { "x": 2888, "y": 3718, "width": 24, "height": 24 },
+          { "x": 2896, "y": 3688, "width": 18, "height": 30 },
+          { "x": 2882, "y": 3696, "width": 14, "height": 22 },
+          { "x": 2877, "y": 3696, "width": 5, "height": 8 }
         ]
       },
 	  {
@@ -52,7 +56,7 @@
         "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
-          { "x": 2560, "y": 3008, "width": 62, "height": 63 }
+          { "x": 2560, "y": 3008, "width": 62, "height": 64 }
         ]
       },
       {
