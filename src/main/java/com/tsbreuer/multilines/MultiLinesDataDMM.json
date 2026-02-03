@@ -36,6 +36,16 @@
         ]
       },
       {
+        "Name": "South of Yanille - West of Gu Tanoth",
+        "Removed": false,
+        "Enabled": true,
+        "Wilderness": false,
+        "Notes": " - ",
+        "Tiles": [
+          { "x": 2560, "y": 3008, "width": 62, "height": 64 }
+        ]
+      },
+      {
         "Name": "ONE TILE IN MIDDLE OF SAVANNAH",
         "Removed": false,
         "Enabled": true,
