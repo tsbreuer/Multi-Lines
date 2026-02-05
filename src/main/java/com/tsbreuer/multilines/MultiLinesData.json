@@ -66,7 +66,8 @@
         "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
-          { "x": 1345, "y": 3101, "width": 15, "height": 23 }
+          { "x": 1345, "y": 3101, "width": 16, "height": 24 },
+		  { "x": 1267, "y": 3162, "width": 16, "height": 18 }
         ]
       },
       {
