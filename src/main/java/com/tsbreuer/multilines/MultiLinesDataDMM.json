@@ -45,6 +45,40 @@
           { "x": 2560, "y": 3008, "width": 62, "height": 64 }
         ]
       },
+	    {
+        "Name": "Gemstone Crab",
+        "Removed": false,
+        "Enabled": true,
+        "Wilderness": false,
+        "Notes": " - ",
+        "Tiles": [
+          { "x": 1345, "y": 3101, "width": 16, "height": 24 },
+		      { "x": 1267, "y": 3162, "width": 16, "height": 18 }
+        ]
+      },
+		  {
+        "Name": "Gemstone Crab south of talk teklan",
+        "Removed": false,
+        "Enabled": true,
+        "Wilderness": false,
+        "Notes": "This area is deceptively big",
+        "Tiles": [
+          { "x": 1221, "y": 3011, "width": 17, "height": 60 },
+          { "x": 1238, "y": 3011, "width": 14, "height": 59 },
+          { "x": 1216, "y": 3034, "width": 5, "height": 34 },
+          { "x": 1227, "y": 3008, "width": 5, "height": 34 },
+          { "x": 1252, "y": 3015, "width": 13, "height": 52 },
+          { "x": 1265, "y": 3015, "width": 3, "height": 40 },
+          { "x": 1268, "y": 3020, "width": 1, "height": 35 },
+          { "x": 1269, "y": 3026, "width": 1, "height": 29 },
+          { "x": 1270, "y": 3028, "width": 1, "height": 27 },
+          { "x": 1271, "y": 3032, "width": 1, "height": 23 },
+          { "x": 1272, "y": 3036, "width": 1, "height": 19 },
+          { "x": 1273, "y": 3043, "width": 1, "height": 12 },
+          { "x": 1274, "y": 3045, "width": 2, "height": 9 },
+          { "x": 1276, "y": 3047, "width": 2, "height": 5 }
+        ]
+      },
       {
         "Name": "ONE TILE IN MIDDLE OF SAVANNAH",
         "Removed": false,
