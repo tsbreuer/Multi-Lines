@@ -59,6 +59,16 @@
           { "x": 2560, "y": 3008, "width": 62, "height": 64 }
         ]
       },
+	  {
+        "Name": "Gemstone Crab",
+        "Removed": false,
+        "Enabled": true,
+        "Wilderness": false,
+        "Notes": " - ",
+        "Tiles": [
+          { "x": 1345, "y": 3101, "width": 15, "height": 23 }
+        ]
+      },
       {
         "Name": "Death Plateau",
         "Removed": false,
