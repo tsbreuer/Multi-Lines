@@ -70,6 +70,17 @@
 		  { "x": 1267, "y": 3162, "width": 16, "height": 18 }
         ]
       },
+		{
+        "Name": "Gemstone Crab south of talk teklan",
+        "Removed": false,
+        "Enabled": true,
+        "Wilderness": false,
+        "Notes": "This area is deceptively big",
+        "Tiles": [
+          { "x": 1221, "y": 3011, "width": 17, "height": 60 },
+          { "x": 1238, "y": 3011, "width": 14, "height": 60 }
+        ]
+      },
       {
         "Name": "Death Plateau",
         "Removed": false,
