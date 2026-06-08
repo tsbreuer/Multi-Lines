@@ -295,7 +295,7 @@
         "Wilderness": false,
         "Notes": " - ",
         "Tiles": [
-          {"x": 3264, "y": 3136, "width": 64, "height": 64}
+          {"x": 3234, "y": 3136, "width": 94, "height": 64}
         ]
       },
       {
